@@ -9,3 +9,4 @@ Build a basic accordion component that takes in a list of accordion content. Acc
 - @Input()
 - dynamic class binding
 - (click)
+- interface

@@ -9,11 +9,11 @@
   background-color: $blue;
   color: white;
 
+  @include box-shadow();
+
   @media screen and (max-width: $tablet) {
     grid-template-columns: 1fr;
   }
-
-  @include box-shadow();
 }
 
 :host ::ng-deep {

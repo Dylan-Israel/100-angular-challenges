@@ -9,5 +9,4 @@ export class CardComponent {
   @Input() public title = '';
   @Input() public subTitle = '';
   @Input() public iconClasses = '';
-
 }

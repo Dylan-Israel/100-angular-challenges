@@ -7,7 +7,7 @@ import { AccordionItem } from './accordion-item.interface';
   styleUrls: ['./accordion.component.scss']
 })
 export class AccordionComponent {
-  @Input() public accordionItems: AccordionItem[] = [];
+  @Input() public items: AccordionItem[] = [];
 
   public toggle(item: AccordionItem): void {
     item.isExpanded = !item.isExpanded;

@@ -1,5 +1,7 @@
 @import '../../../styles';
 
+$padding: 10px 20px;
+
 .accordion-container {
   @include box-shadow();
 
@@ -10,7 +12,7 @@
       display: grid;
       grid-template-columns: 1fr auto;
       align-items: center;
-      padding: 10px 20px;
+      padding: $padding;
 
       i {
         color: $blue;
@@ -23,7 +25,7 @@
     }
 
     .content {
-      padding: 10px 20px;
+      padding: $padding;
       display: none;
 
       &.is-expanded {

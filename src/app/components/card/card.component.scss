@@ -1,28 +1,32 @@
-@import './../../../styles';
-
-$spacing: 10px;
+@import '../../../styles';
 
 .card-container {
   display: grid;
-  grid-gap: $spacing;
-  @include box-shadow();
+  grid-gap: 10px;
   border-radius: 3px;
+  margin-top: 10px;
+
+  @include box-shadow();
 
   .header {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-gap: 10px;
     align-items: center;
-    padding: $spacing;
+    padding: 10px;
     background-color: $green;
     color: white;
 
     .title {
       display: grid;
-      grid-template-columns: auto 1fr;
       grid-gap: 10px;
+      grid-template-columns: auto 1fr;
       align-items: center;
     }
   }
 
+  .body,
+  .footer {
+    padding: 10px;
+  }
 }

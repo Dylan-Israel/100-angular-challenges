@@ -8,15 +8,13 @@
   </ul>
 </app-toolbar>
 
-<!-- TEMPORARY COMPONENTS START -->
-<app-card [title]="'Accordion'" [subTitle]="'Components'">
-  <app-accordion body [accordionItems]="accordionItems"></app-accordion>
-</app-card>
+<main>
+  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Accordion'" [subTitle]="'Components'">
+    <app-accordion body [items]="accordionItems"></app-accordion>
+  </app-card>
 
-<app-card [title]="'Card'" [subTitle]="'Components'" [iconClasses]="'fas fa-info-circle'">
-
-  <p body>Body Content</p>
-  <p footer>Footer Content</p>
-</app-card>
-
-<!-- TEMPORARY COMPONENTS END -->
+  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Card'" [subTitle]="'Components'">
+    <p footer>Footer Content</p>
+    <p body>Body Content</p>
+  </app-card>
+</main>
