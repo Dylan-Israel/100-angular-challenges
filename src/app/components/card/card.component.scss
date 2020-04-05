@@ -1,0 +1,28 @@
+@import './../../../styles';
+
+$spacing: 10px;
+
+.card-container {
+  display: grid;
+  grid-gap: $spacing;
+  @include box-shadow();
+  border-radius: 3px;
+
+  .header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    padding: $spacing;
+    background-color: $green;
+    color: white;
+
+    .title {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-gap: 10px;
+      align-items: center;
+    }
+  }
+
+}
