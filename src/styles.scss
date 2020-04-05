@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@import './styles/colors';
+@import './styles/variables';
+@import './styles/mixins';
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap');
+
+* {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+i {
+  cursor: pointer;
+}
