@@ -6,6 +6,7 @@ import { COMPONENTS_ROUTES } from './components.routes';
 import { AccordionComponent } from './accordion/accordion.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { StarRatingsComponent } from './star-ratings/star-ratings.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [ComponentDocumentationComponent,
@@ -15,6 +16,7 @@ import { StarRatingsComponent } from './star-ratings/star-ratings.component';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     RouterModule.forChild(COMPONENTS_ROUTES)
   ]
 })

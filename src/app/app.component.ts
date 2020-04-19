@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AccordionItem } from './components/accordion/accordion-item.interface';
 
 @Component({
   selector: 'app-root',
