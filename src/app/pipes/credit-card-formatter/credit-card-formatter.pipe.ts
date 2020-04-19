@@ -29,7 +29,7 @@ export class CreditCardFormatterPipe implements PipeTransform {
     const isMasterDiscoverVisaCardLength = 16;
     const isAmericanExpressCardLength = 15;
 
-    if (isAmericanExpressCardLength === cardNumberLength || isMasterDiscoverVisaCardLength === cardNumberLength) {
+    if (cardNumberLength === isAmericanExpressCardLength || cardNumberLength === isMasterDiscoverVisaCardLength) {
       return true;
     }
 
