@@ -10,6 +10,9 @@ import { TopOfPageComponent } from './components/top-of-page/top-of-page.compone
 import { RouterModule } from '@angular/router';
 import { ComponentDocumentationComponent } from './components/component-documentation/component-documentation.component';
 import { APP_ROUTES } from './app.routes';
+import { PipeDocumentationComponent } from './pipes/pipe-documentation/pipe-documentation.component';
+import { ServiceDocumentationComponent } from './services/service-documentation/service-documentation.component';
+import { DirectiveDocumentationComponent } from './directives/directive-documentation/directive-documentation.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { APP_ROUTES } from './app.routes';
     StarRatingsComponent,
     TopOfPageComponent,
     ComponentDocumentationComponent,
+    PipeDocumentationComponent,
+    ServiceDocumentationComponent,
+    DirectiveDocumentationComponent,
   ],
   imports: [
     BrowserModule,
