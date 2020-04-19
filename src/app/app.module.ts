@@ -5,10 +5,12 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { TopOfPageComponent } from './components/top-of-page/top-of-page.component';
 import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CardComponent,
     ToolbarComponent,
     TopOfPageComponent,
   ],

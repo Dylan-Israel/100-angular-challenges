@@ -1,1 +1,8 @@
-<p>pipe-documentation works!</p>
+<h1>Pipes</h1>
+<hr>
+
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Truncate'" [subTitle]="'Pipes'">
+  <p>
+    {{'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, ea, fugit magnam voluptatum odit fugiat cumque cum temporibus repellendus corrupti reprehenderit deserunt consequuntur laudantium libero beatae adipisci suscipit atque commodi.' | appTruncate}}
+  </p>
+</app-card>
