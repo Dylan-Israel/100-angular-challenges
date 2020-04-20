@@ -7,5 +7,5 @@ Create a credit card input that when in readonly mode x out everything but last 
 - @Component()
 - @Input()
 - ng-container
-- ng-switch  *ngSwitchCase / *ngSwitchDefault
+- ng-switch / *ngSwitchCase / *ngSwitchDefault
 - ngModel

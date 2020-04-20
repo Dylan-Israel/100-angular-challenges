@@ -11,7 +11,6 @@ export class CreditCardInputComponent {
   public get isReadonly() {
     return this.readonly;
   }
-
   @Input() public set isReadonly(value: boolean) {
     this.creditCardNumber = value ? this.formatReadonlyCCNum(this.creditCardNumber) : this.creditCardNumber;
     this.readonly = value;
@@ -26,7 +25,6 @@ export class CreditCardInputComponent {
 
       return 'xxxx';
     });
-
 
     return onlyLast4Shown.join('-');
   }
