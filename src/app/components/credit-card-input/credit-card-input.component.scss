@@ -1,0 +1,20 @@
+#credit-card-input-container {
+  display: grid;
+  grid-gap: 10px;
+
+  #input-container {
+    position: relative;
+
+    input {
+      padding: 10px;
+      padding-left: 2.5em;
+    }
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 1em;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

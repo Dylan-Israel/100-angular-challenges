@@ -1,5 +1,13 @@
 <h1>Components</h1>
 <hr>
+
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Credit Card Input '" [subTitle]="'Components'">
+  <div body>
+    <app-credit-card-input [creditCardNumber]="'4321432143214321'" [isReadonly]="false"></app-credit-card-input>
+    <app-credit-card-input [creditCardNumber]="'4321432143214321'" [isReadonly]="true"></app-credit-card-input>
+  </div>
+</app-card>
+
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Top of Page'" [subTitle]="'Components'">
   <p body>Scroll 400px down the page to render.</p>
 
