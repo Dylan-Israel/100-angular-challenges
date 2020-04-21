@@ -9,6 +9,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { StarRatingsComponent } from './star-ratings/star-ratings.component';
 import { SharedModule } from '../shared/shared.module';
 import { CreditCardInputComponent } from './credit-card-input/credit-card-input.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [ComponentDocumentationComponent,
@@ -16,6 +17,7 @@ import { CreditCardInputComponent } from './credit-card-input/credit-card-input.
     ProgressBarComponent,
     StarRatingsComponent,
     CreditCardInputComponent,
+    LoaderComponent,
   ],
   imports: [
     CommonModule,

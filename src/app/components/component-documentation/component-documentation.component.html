@@ -1,7 +1,11 @@
 <h1>Components</h1>
 <hr>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Credit Card Input '" [subTitle]="'Components'">
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Loader'" [subTitle]="'Components'">
+  <app-loader body [isLoading]="false"></app-loader>
+</app-card>
+
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Credit Card Input'" [subTitle]="'Components'">
   <div body>
     <app-credit-card-input [creditCardNumber]="'4321432143214321'" [isReadonly]="false"></app-credit-card-input>
     <br>
