@@ -8,3 +8,4 @@ Expand our existing loader to now take in an input for a loader type. Circular o
 - @Input()
 - Enum
 - ngSwitch / ngSwitchCase
+- ngOnInit
