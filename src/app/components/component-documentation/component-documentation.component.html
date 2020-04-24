@@ -1,6 +1,10 @@
 <h1>Components</h1>
 <hr>
 
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Twitter Post'" [subTitle]="'Components'">
+  <app-twitter-post body></app-twitter-post>
+</app-card>
+
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Loader'" [subTitle]="'Components'">
   <app-loader body [isLoading]="false" [loaderType]="loaderType"></app-loader>
 </app-card>
