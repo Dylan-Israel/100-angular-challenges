@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -8,21 +8,21 @@ import { Title } from '@angular/platform-browser';
 })
 export class TwitterPostComponent {
   @Input() public baseHref = 'https://www.DylanIsrael.com';
-  @Input() public hashTags: string[] = ['Dylan Israel', 'JavaScript', 'TypeScript', 'Angular', '100 Angular Challenge'];
+  @Input() public hashTags: string[] = ['DylanIsrael', 'JavaScript', 'TypeScript', 'Angular', '100 Angular Challenge'];
 
   constructor(public titleService: Title) { }
 
-  public get twitterMessage(): string {
-    const base = this.getBaseWithHashtagsAndRoute();
+  public get twitterUrl(): string {
+    const base = this.getBaseWithHashTagsAndRoute();
     const message = encodeURIComponent(`Check out ${this.titleService.getTitle()} and become a CODING GOD!!!`);
 
     return `${base}${message}`;
   }
 
-  private getBaseWithHashtagsAndRoute(): string {
+  private getBaseWithHashTagsAndRoute() {
     const route = encodeURI(this.baseHref);
-    const hashtags = this.hashTags.join(',');
+    const hashTags = this.hashTags.join(',');
 
-    return `https://twitter.com/intent/tweet?hashtags=${encodeURIComponent(hashtags)}&related=pizzapokerguy&url=${route}&text=`;
+    return `https://twitter.com/intent/tweet?hashtags=${encodeURIComponent(hashTags)}&related=pizzapokerguy&url=${route}&text=`;
   }
 }
