@@ -12,6 +12,7 @@ import { CreditCardInputComponent } from './credit-card-input/credit-card-input.
 import { LoaderComponent } from './loader/loader.component';
 import { TwitterPostComponent } from './twitter-post/twitter-post.component';
 import { LinkedinPostComponent } from './linkedin-post/linkedin-post.component';
+import { ToggleComponent } from './toggle/toggle.component';
 
 @NgModule({
   declarations: [ComponentDocumentationComponent,
@@ -22,6 +23,7 @@ import { LinkedinPostComponent } from './linkedin-post/linkedin-post.component';
     LoaderComponent,
     TwitterPostComponent,
     LinkedinPostComponent,
+    ToggleComponent,
   ],
   imports: [
     CommonModule,
