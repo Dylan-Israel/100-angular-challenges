@@ -1,25 +1,27 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'appFlatten'
+  name: 'appFlatten',
+  pure: false
 })
 export class FlattenPipe implements PipeTransform {
-  public transform(value: any[]): any[] {
+  public transform(values: any[]): any[] {
 
-    return this.flattenArray(value);
+    return this.flattenArray(values);
   }
 
-  public flattenArray(arr: any[]): any[] {
+  private flattenArray(arr: any[]): any[] {
     const result = [];
 
-    arr.forEach(el => {
-      if (Array.isArray(el)) {
-        result.push(...this.flattenArray(el));
+    arr.forEach((value) => {
+      if (Array.isArray(value)) {
+        result.push(...this.flattenArray(value));
       } else {
-        result.push(el);
+        result.push(value);
       }
     });
 
     return result;
   }
+
 }
