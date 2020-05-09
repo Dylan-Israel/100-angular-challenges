@@ -1,6 +1,18 @@
 <h1>Components</h1>
 <hr>
 
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Modal'" [subTitle]="'Components'">
+  <div body>
+    <app-modal [title]="'Modal Example'" #modal>
+      <p>Some Content</p>
+    </app-modal>
+  </div>
+
+  <div footer>
+    <button (click)="modal.open()">Call Modal</button>
+  </div>
+</app-card>
+
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Toggle'" [subTitle]="'Components'">
   <app-toggle [isOn]="toggleValue" body></app-toggle>
 </app-card>
