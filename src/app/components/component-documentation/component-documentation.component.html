@@ -1,6 +1,25 @@
 <h1>Components</h1>
 <hr>
 
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Rich Text Viewer'" [subTitle]="'Components'">
+  <div body>
+    <div>
+      <h3>Good Example</h3>
+      <app-rich-text-viewer [htmlText]="'<p>Hello World</p>'"></app-rich-text-viewer>
+    </div>
+
+    <div>
+      <h3>Empty Example</h3>
+      <app-rich-text-viewer [htmlText]="'   '"></app-rich-text-viewer>
+    </div>
+
+    <div>
+      <h3>Bad HTML Example</h3>
+      <app-rich-text-viewer [htmlText]="'<p> Hello World'"></app-rich-text-viewer>
+    </div>
+  </div>
+</app-card>
+
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Quote'" [subTitle]="'Components'">
   <app-quote body [quote]="'Get Good. Get Great. Get Better.'" [author]="'Dylan C. Israel'"
     [occupation]="'Software Engineer, Mentor, & Educator'">
