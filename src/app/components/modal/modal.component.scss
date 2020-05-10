@@ -1,4 +1,4 @@
-#modal-container {
+.modal-container {
   z-index: 3;
   display: grid;
   position: fixed;
@@ -15,7 +15,7 @@
   grid-gap: 10px;
   transition: display .3s;
 
-  #modal-header {
+  .modal-header {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
@@ -26,13 +26,13 @@
   }
 }
 
-#modal-overlay {
+.modal-overlay {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, .6);
+  background-color: rgba(0, 0, 0, 0.6);
   opacity: 1;
   z-index: 2;
   transition: opacity .3s;

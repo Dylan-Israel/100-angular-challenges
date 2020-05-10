@@ -6,4 +6,5 @@ Build a modal component that takes in a title, renders nested content to the bod
 ---
 - @Component()
 - @Input()
+- ng-content
 - template reference
