@@ -1,6 +1,6 @@
 # Debounce Click Directive 
 
-Create a directive that debounces for up to 500ms. 
+Create a directive that debounces a click event for up to 500ms. 
 
 ## Tips
 ---

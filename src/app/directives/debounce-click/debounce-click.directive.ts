@@ -1,4 +1,4 @@
-import { Directive, EventEmitter, HostListener, OnDestroy, OnInit, Output } from '@angular/core';
+import { Directive, Output, EventEmitter, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { Subject, Subscription } from 'rxjs';
 import { debounceTime } from 'rxjs/internal/operators/debounceTime';
 
@@ -17,7 +17,7 @@ export class DebounceClickDirective implements OnInit, OnDestroy {
 
     this.subscription = this.clicks.pipe(
       debounceTime(debounceTimeInMs)
-    ).subscribe((e: any) => this.debounceClick.emit(e));
+    ).subscribe((value: any) => this.debounceClick.emit(value));
   }
 
   public ngOnDestroy(): void {
@@ -30,4 +30,5 @@ export class DebounceClickDirective implements OnInit, OnDestroy {
     event.stopPropagation();
     this.clicks.next();
   }
+
 }
