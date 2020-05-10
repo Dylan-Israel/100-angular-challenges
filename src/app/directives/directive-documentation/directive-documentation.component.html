@@ -1,2 +1,8 @@
 <h1>Directives</h1>
 <hr>
+
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Debounce Click'" [subTitle]="'Directives'">
+  <div body>
+    <button appDebounceClick (debounceClick)="log()">Log</button>
+  </div>
+</app-card>
