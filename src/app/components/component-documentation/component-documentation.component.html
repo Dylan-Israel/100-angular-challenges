@@ -1,6 +1,12 @@
 <h1>Components</h1>
 <hr>
 
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Quote'" [subTitle]="'Components'">
+  <app-quote body [quote]="'Get Good. Get Great. Get Better.'" [author]="'Dylan C. Israel'"
+    [occupation]="'Engineer, Mentor, & Educator'">
+  </app-quote>
+</app-card>
+
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Modal'" [subTitle]="'Components'">
   <div body>
     <app-modal [title]="'Modal Example'" #modal>
