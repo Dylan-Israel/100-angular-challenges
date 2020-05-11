@@ -16,6 +16,7 @@ import { ToggleComponent } from './toggle/toggle.component';
 import { ModalComponent } from './modal/modal.component';
 import { QuoteComponent } from './quote/quote.component';
 import { RichTextViewerComponent } from './rich-text-viewer/rich-text-viewer.component';
+import { DebounceSearchComponent } from './debounce-search/debounce-search.component';
 
 @NgModule({
   declarations: [ComponentDocumentationComponent,
@@ -30,6 +31,7 @@ import { RichTextViewerComponent } from './rich-text-viewer/rich-text-viewer.com
     ModalComponent,
     QuoteComponent,
     RichTextViewerComponent,
+    DebounceSearchComponent,
   ],
   imports: [
     CommonModule,
