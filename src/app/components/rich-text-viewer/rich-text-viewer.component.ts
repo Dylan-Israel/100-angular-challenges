@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { htmlRegex } from './html-regex.data';
 
 @Component({
@@ -8,17 +8,17 @@ import { htmlRegex } from './html-regex.data';
 })
 export class RichTextViewerComponent {
   public validHtml = '';
-  @Input() public set htmlText(value: string) {
-    const html = this.parseForNonEmptyHtml(value);
+
+  @Input() set htmlText(value: string) {
+    const html = this.parseNonEmptyHtml(value);
     const isValidHtml = htmlRegex.test(html);
     this.validHtml = isValidHtml ? html : '';
   }
 
-  private parseForNonEmptyHtml(html: string = '') {
+  private parseNonEmptyHtml(html: string = '') {
     const htmlTags: RegExp = /<[^]*?>/g;
     const hasContent = html.replace(htmlTags, '').trim().length > 0;
 
     return hasContent ? html : '';
   }
-
 }
