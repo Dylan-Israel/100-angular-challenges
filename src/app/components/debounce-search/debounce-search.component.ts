@@ -16,7 +16,7 @@ export class DebounceSearchComponent {
 
   constructor() {
     this.searchUpdate$.pipe(
-      debounceTime(2500),
+      debounceTime(250),
       distinctUntilChanged()
     )
       .subscribe(value => {
