@@ -9,3 +9,4 @@ Build a debounce search input that notifies the parent of its value updating eve
 - @Output()
 - ngModel
 - Subject
+- ngModelChange
