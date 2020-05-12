@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-search-list',
@@ -7,16 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SearchListComponent {
   public searchTerm = '';
+  @Input() public items: string[] = [];
   public hasBeenSelected = false;
-  @Input() public items = ['United States', 'Mexico', 'United Arab Emirates'];
 
   public updateSearchTerm(value: string): void {
     this.searchTerm = value;
     this.hasBeenSelected = false;
   }
 
-  public selectSearchTerm(term: string) {
-    this.searchTerm = term;
+  public selectSearchTerm(value: string): void {
+    this.searchTerm = value;
     this.hasBeenSelected = true;
   }
 }
