@@ -1,0 +1,36 @@
+@import 'src/styles';
+
+.counter-container {
+  display: flex;
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  $padding: 5px;
+
+  /* Firefox */
+  input[type=number] {
+    padding: $padding;
+    -moz-appearance: textfield;
+  }
+
+  button {
+    padding: 5px 8px;
+    color: white;
+
+    &.increment {
+      background-color: $green;
+      border: 1px solid $green;
+    }
+
+    &.decrement {
+      background-color: $red;
+      border: 1px solid $red;
+    }
+  }
+
+}
