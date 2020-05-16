@@ -1,4 +1,4 @@
-import { Component, Input, } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -17,7 +17,6 @@ export class CounterComponent {
   }
 
   public addOne(): void {
-    console.log(this.max > this.counter);
     if (this.max > this.counter) {
       this.counter++;
     }
