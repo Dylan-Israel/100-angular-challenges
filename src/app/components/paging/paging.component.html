@@ -1,19 +1,17 @@
-<div>
-  <ul>
-    <li>
-      <button (click)="setPage(currentPage - step)" [disabled]='isPreviousDisabled'>
-        <i class="fas fa-chevron-left"></i>
-      </button>
-    </li>
+<ul>
+  <li>
+    <button [disabled]="isPreviousDisabled" (click)="setPage(this.currentPage - step)">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+  </li>
 
-    <li *ngFor="let page of pages">
-      <button [class.current-page]="currentPage === page" (click)="setPage(page)">{{page}}</button>
-    </li>
+  <li *ngFor="let page of pages">
+    <button (click)="setPage(page)" [class.current-page]="currentPage === page">{{page}}</button>
+  </li>
 
-    <li>
-      <button (click)="setPage(currentPage + step)" [disabled]="isNextDisabled">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-    </li>
-  </ul>
-</div>
+  <li>
+    <button (click)="setPage(currentPage + step)" [disabled]="isNextDisabled">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </li>
+</ul>
