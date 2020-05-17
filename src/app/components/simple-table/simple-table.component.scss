@@ -1,0 +1,26 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    th {
+      text-transform: uppercase;
+      padding: 5px 10px;
+      text-align: left;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  tbody {
+    tr {
+      &:hover {
+        background-color: #eee;
+      }
+
+      td {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        padding-left: 10px;
+      }
+    }
+  }
+}
