@@ -1,6 +1,11 @@
 <h1>Components</h1>
 <hr>
 
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Paging'" [subTitle]="'Components'">
+  <app-paging body [totalItems]="500"> </app-paging>
+</app-card>
+
+
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Simple Table'" [subTitle]="'Components'">
   <app-simple-table body></app-simple-table>
 </app-card>

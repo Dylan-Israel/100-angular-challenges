@@ -1,0 +1,31 @@
+@import 'src/styles';
+
+ul {
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+
+  li {
+    display: inline;
+    list-style: none;
+    margin: 3px;
+
+    button {
+      border: none;
+      background-color: white;
+      box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+
+
+      &.current-page {
+        background-color: $blue;
+        color: white;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
