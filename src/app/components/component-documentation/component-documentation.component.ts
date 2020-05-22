@@ -23,8 +23,14 @@ export class ComponentDocumentationComponent {
   public progressValue = 25;
   public loaderType = LoaderType.Loading;
   public toggleValue = false;
+  public tabs: { title: string, active: boolean }[] = [
+    { title: 'Tab 1', active: true },
+    { title: 'Tab 2', active: false },
+  ];
+  public selectedTab = 0;
 
   public debounceExampleMethod(value: string): void {
     console.log('Component Documentation', value);
   }
+
 }
