@@ -5,6 +5,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { TopOfPageComponent } from './components/top-of-page/top-of-page.component';
 import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { APP_ROUTES } from './app.routes';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(APP_ROUTES)
   ],
   providers: [],
