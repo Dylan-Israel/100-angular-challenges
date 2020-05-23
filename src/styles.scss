@@ -30,16 +30,33 @@ i {
 .ripple {
   background-position: center;
   transition: all 0.8s;
+
+  &:hover {
+    color: white;
+    transition: background 0.8s;
+    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+  }
+
+  &:active {
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background 0s;
+  }
 }
 
-.ripple:hover {
-  color: white;
-  transition: background 0.8s;
-  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
-}
+.ripple2 {
+  background-position: center;
+  transition: all 0.8s;
 
-.ripple:active {
-  background-color: #6eb9f7;
-  background-size: 100%;
-  transition: background 0s;
+  &:hover {
+    color: white;
+    transition: background 0.8s;
+    background: $green radial-gradient(circle, transparent 1%, $green 1%) center/15000%;
+  }
+
+  &:active {
+    background-color: green;
+    background-size: 100%;
+    transition: background 0s;
+  }
 }
