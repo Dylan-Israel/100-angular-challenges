@@ -1,27 +1,29 @@
 @import 'src/styles';
 
-#contact-page {
+
+
+.email-form-container {
   display: grid;
   grid-gap: 10px;
 
-  input,
-  textarea {
-    width: 100%;
-    padding: 10px;
-  }
-
-  #contact-container {
-    #contact-form-container {
+  .email-container {
+    .form-container {
       padding: 10px;
 
       h2 {
         color: $blue;
-        margin-top: 0;
       }
 
-      #contact-form {
+      .email-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'name email'
+          'message message'
+          '. submit';
+        grid-gap: 20px;
 
         input[type=text],
+        input[type=email],
         textarea {
           padding-left: 33px;
         }
@@ -31,14 +33,7 @@
           color: $red;
         }
 
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 'name email'
-        'message message'
-        '. submit';
-        grid-gap: 20px;
-
-        #name {
+        .name {
           grid-area: name;
 
           &.error {
@@ -46,7 +41,7 @@
           }
         }
 
-        #email {
+        .email {
           grid-area: email;
 
           &.error {
@@ -54,20 +49,20 @@
           }
         }
 
-        #message {
+        .message {
           grid-area: message;
           position: relative;
 
           i {
             position: absolute;
-            top: 22px;
+            top: 20px;
             left: 18px;
             transform: translate(-50%, -50%);
           }
         }
 
-        #name,
-        #email {
+        .name,
+        .email {
           position: relative;
 
           i {
@@ -87,13 +82,14 @@
             }
           }
         }
-      }
 
-      button {
-        border: 1px solid $blue;
-        grid-area: submit;
-        padding: 10px 40px;
-        justify-self: end;
+        button {
+          grid-area: submit;
+          border: 1px solid $blue;
+          background-color: white;
+          padding: 10px 40px;
+          justify-self: end;
+        }
       }
     }
   }

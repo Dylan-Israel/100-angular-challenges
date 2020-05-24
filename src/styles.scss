@@ -26,6 +26,12 @@ i {
   cursor: pointer;
 }
 
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+}
+
 /* Ripple effect */
 .ripple {
   background-position: center;

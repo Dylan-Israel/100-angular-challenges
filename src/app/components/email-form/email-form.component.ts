@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-email-form',
@@ -13,7 +13,7 @@ export class EmailFormComponent {
     this.initializeForm();
   }
 
-  private initializeForm(): void {
+  private initializeForm() {
     this.form = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
@@ -22,6 +22,6 @@ export class EmailFormComponent {
   }
 
   public submitMessage() {
-    console.log('I AM A CODING GOD!!!');
+    console.log('Check out Dylan\'s 100 Algorithm Challenge or 100 Front End Interview Challenge Courses.');
   }
 }
