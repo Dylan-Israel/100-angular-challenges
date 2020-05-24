@@ -1,7 +1,8 @@
 <table *ngIf="tableData && tableData.length">
   <thead>
     <tr>
-      <th *ngFor="let header of tableData[0] | keyvalue">{{header.key}}</th>
+      <th *ngFor="let header of tableData[0] | keyvalue" (click)="headerSelection(header.key, header.value)">
+        {{header.key}}</th>
     </tr>
   </thead>
 

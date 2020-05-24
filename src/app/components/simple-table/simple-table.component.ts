@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-simple-table',
@@ -12,4 +12,10 @@ export class SimpleTableComponent {
     { first: 'Dylan 3', last: 'Israel', dob: '10/25/87' },
     { first: 'Dylan 4', last: 'Israel', dob: '10/25/87' },
   ];
+
+  @Output() headerSelected = new EventEmitter<{ key: string, value: any }>();
+
+  public headerSelection(key: string, value: any): void {
+    this.headerSelected.emit({ key, value });
+  }
 }

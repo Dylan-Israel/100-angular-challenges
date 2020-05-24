@@ -15,7 +15,8 @@ export class SortTableComponent {
 
   public sortDirection = true;
 
-  public sort(key: string, value: any): void {
+  public sort(data: { key: string, value: any }): void {
+    const { key, value } = data;
     this.sortDirection = !this.sortDirection;
 
     switch (true) {
