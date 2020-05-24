@@ -1,0 +1,14 @@
+<table *ngIf="tableData && tableData.length">
+  <thead>
+    <tr>
+      <th *ngFor="let header of tableData[0] | keyvalue" (click)="sort(header.key, header.value)">{{header.key}}
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let row of tableData">
+      <td *ngFor="let data of row | keyvalue">{{data.value}}</td>
+    </tr>
+  </tbody>
+</table>

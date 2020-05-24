@@ -1,6 +1,11 @@
 <h1>Components</h1>
 <hr>
 
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Sort Table'" [subTitle]="'Components'">
+  <app-sort-table body></app-sort-table>
+</app-card>
+
+
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Tabs'" [subTitle]="'Components'">
   <app-tabs body [tabs]="tabs" (selectedTabIndex)="selectedTab = $event;">
     <app-paging *ngIf="selectedTab === 0" [totalItems]="200"> </app-paging>
