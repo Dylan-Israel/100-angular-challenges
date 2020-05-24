@@ -1,0 +1,100 @@
+@import 'src/styles';
+
+#contact-page {
+  display: grid;
+  grid-gap: 10px;
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #contact-container {
+    #contact-form-container {
+      padding: 10px;
+
+      h2 {
+        color: $blue;
+        margin-top: 0;
+      }
+
+      #contact-form {
+
+        input[type=text],
+        textarea {
+          padding-left: 33px;
+        }
+
+        .error {
+          font-size: 0.75em;
+          color: $red;
+        }
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'name email'
+        'message message'
+        '. submit';
+        grid-gap: 20px;
+
+        #name {
+          grid-area: name;
+
+          &.error {
+            border-left: 5px solid $red;
+          }
+        }
+
+        #email {
+          grid-area: email;
+
+          &.error {
+            border-left: 5px solid $red;
+          }
+        }
+
+        #message {
+          grid-area: message;
+          position: relative;
+
+          i {
+            position: absolute;
+            top: 22px;
+            left: 18px;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        #name,
+        #email {
+          position: relative;
+
+          i {
+            position: absolute;
+            top: 50%;
+            left: 18px;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        input,
+        textarea {
+          &:focus {
+            &+i {
+              transition: all 0.3s;
+              color: $blue;
+            }
+          }
+        }
+      }
+
+      button {
+        border: 1px solid $blue;
+        grid-area: submit;
+        padding: 10px 40px;
+        justify-self: end;
+      }
+    }
+  }
+}
