@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { fadeInOutAnimation } from '../animations/fade-in-out.animation';
+import { fadeInOutAnimation } from '../animations/fade-in-out/fade-in-out.animation';
 
 @Component({
   selector: 'app-other-documentation',
@@ -9,6 +9,4 @@ import { fadeInOutAnimation } from '../animations/fade-in-out.animation';
 })
 export class OtherDocumentationComponent {
   public isInDOM = true;
-
-
 }
