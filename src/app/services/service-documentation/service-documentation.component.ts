@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user/user.service';
 import { User } from '../user/user.model';
+import { UserService } from '../user/user.service';
 
 @Component({
   selector: 'app-service-documentation',
@@ -8,23 +8,22 @@ import { User } from '../user/user.model';
   styleUrls: ['./service-documentation.component.scss']
 })
 export class ServiceDocumentationComponent implements OnInit {
-  public user: User;
+  public user = new User();
 
-  constructor(private userService: UserService) { }
+  constructor(public userService: UserService) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.userService.getUserById(1).subscribe({
-      next: (response: User) => {
+      next: (response: any) => {
         this.user = response;
-        console.log(this.user)
+        console.log(this.user);
       },
-      error: (error: Error) => {
+      error: (error) => {
         console.log(error);
       },
       complete: () => {
-        console.log('Done.');
+        console.log('Done');
       }
     });
   }
-
 }
