@@ -1,2 +1,8 @@
 <h1>Services</h1>
 <hr>
+
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'User'" [subTitle]="'Service'">
+  <div body>
+    <p>{{user | json}}</p>
+  </div>
+</app-card>

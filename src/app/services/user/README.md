@@ -9,3 +9,4 @@ Build a GET call to get a user by id from 'https://jsonplaceholder.typicode.com/
 - pipe()
 - map()
 - subscribe()
+- json pipe
