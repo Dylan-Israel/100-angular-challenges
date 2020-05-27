@@ -5,8 +5,8 @@
   padding: 16px;
   position: fixed;
   text-align: center;
-  color: #f0f0f0;
-  z-index: 2;
+  color: white;
+  z-index: 20;
 
   &.top-right {
     top: 25px;
@@ -20,16 +20,20 @@
     transform: rotate(-45deg);
   }
 
+  &.bottom-left {
+    left: -50px;
+    bottom: 25px;
+    transform: rotate(45deg);
+  }
+
   &.bottom-right {
     right: -50px;
     bottom: 25px;
     transform: rotate(-45deg);
   }
 
-  &.bottom-left {
-    left: -50px;
-    bottom: 25px;
-    transform: rotate(45deg);
+  &.success {
+    background-color: $green;
   }
 
   &.info {
@@ -42,9 +46,5 @@
 
   &.warning {
     background-color: $orange;
-  }
-
-  &.success {
-    background-color: $green;
   }
 }

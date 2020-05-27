@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { RibbonLocation } from './ribbon-location.enum';
 import { RibbonType } from './ribbon-type';
+import { RibbonLocation } from './ribbon-location.enum';
 
 @Component({
   selector: 'app-ribbon',
@@ -9,6 +9,6 @@ import { RibbonType } from './ribbon-type';
 })
 export class RibbonComponent {
   @Input() public content = '';
-  @Input() public location: RibbonLocation = RibbonLocation.TopRight;
-  @Input() public type: RibbonType = RibbonType.Info;
+  @Input() public location: RibbonLocation = RibbonLocation.BottomLeft;
+  @Input() public type: RibbonType = RibbonType.Success;
 }
