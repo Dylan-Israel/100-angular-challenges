@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { AccordionItem } from '../accordion/accordion-item.interface';
 import { LoaderType } from '../loader/models/loader-type.enum';
+import { RibbonType } from '../ribbon/ribbon-type';
+import { RibbonLocation } from '../ribbon/ribbon-location.enum';
 
 @Component({
   selector: 'app-component-documentation',
@@ -28,6 +30,8 @@ export class ComponentDocumentationComponent {
     { title: 'Tab 2', active: false },
   ];
   public selectedTab = 0;
+
+  public ribbonStyle = { type: RibbonType.Info, location: RibbonLocation.TopRight };
 
   public debounceExampleMethod(value: string): void {
     console.log('Component Documentation', value);
