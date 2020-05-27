@@ -30,7 +30,8 @@ export class ComponentDocumentationComponent {
     { title: 'Tab 2', active: false },
   ];
   public selectedTab = 0;
-
+  public RibbonType = RibbonType;
+  public RibbonLocation = RibbonLocation;
   public ribbonStyle = { type: RibbonType.Info, location: RibbonLocation.TopRight };
 
   public debounceExampleMethod(value: string): void {

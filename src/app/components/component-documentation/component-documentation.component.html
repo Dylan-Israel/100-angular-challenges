@@ -2,9 +2,20 @@
 <hr>
 
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Ribbon'" [subTitle]="'Components'">
-  <app-ribbon body [content]="'Beta Course'"></app-ribbon>
+  <div body>
 
-  <button>Top-Right</button>
+    <app-ribbon [content]="'Beta Course'" [location]="ribbonStyle.location" [type]="ribbonStyle.type"></app-ribbon>
+
+    <button (click)="ribbonStyle.location = RibbonLocation.TopRight">Top-Right</button>
+    <button (click)="ribbonStyle.location = RibbonLocation.TopLeft">Top-Left</button>
+    <button (click)="ribbonStyle.location = RibbonLocation.BottomRight">Bottom-Right</button>
+    <button (click)="ribbonStyle.location = RibbonLocation.BottomLeft">Bottom-Left</button>
+    <button (click)="ribbonStyle.type = RibbonType.Info">Info</button>
+    <button (click)="ribbonStyle.type = RibbonType.Error">Error</button>
+    <button (click)="ribbonStyle.type = RibbonType.Success">Success</button>
+    <button (click)="ribbonStyle.type = RibbonType.Warning">Warning</button>
+
+  </div>
 </app-card>
 
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Email Form'" [subTitle]="'Components'">
