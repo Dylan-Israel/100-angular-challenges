@@ -1,0 +1,39 @@
+@import 'src/styles';
+
+.button-toggle-container {
+  display: flex;
+
+  button {
+    transition: all 0.3s;
+    background-color: white;
+    border: 1px solid $blue;
+    padding: 10px;
+    cursor: pointer;
+
+    &:first-child {
+      border-right: none;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &:last-child {
+      border-left: none;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    &:only-child {
+      border: 1px solid $blue;
+    }
+
+    &.active {
+      color: white;
+      background-color: #0089e6;
+    }
+
+    &:hover {
+      color: white;
+      background-color: #006bb3;
+    }
+  }
+}

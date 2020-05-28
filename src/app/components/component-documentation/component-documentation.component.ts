@@ -3,6 +3,7 @@ import { AccordionItem } from '../accordion/accordion-item.interface';
 import { LoaderType } from '../loader/models/loader-type.enum';
 import { RibbonType } from '../ribbon/ribbon-type';
 import { RibbonLocation } from '../ribbon/ribbon-location.enum';
+import { ButtonMeta } from '../button-toggle/button-meta.model';
 
 @Component({
   selector: 'app-component-documentation',
@@ -34,8 +35,14 @@ export class ComponentDocumentationComponent {
   public RibbonLocation = RibbonLocation;
   public ribbonStyle = { type: RibbonType.Info, location: RibbonLocation.TopRight };
 
+  public buttonToggleOptions: ButtonMeta[] = [
+    new ButtonMeta({ id: 1, title: 'Bold' }),
+    new ButtonMeta({ id: 2, title: 'Italic' }),
+    new ButtonMeta({ id: 3, title: 'Underline' }),
+
+  ];
+
   public debounceExampleMethod(value: string): void {
     console.log('Component Documentation', value);
   }
-
 }
