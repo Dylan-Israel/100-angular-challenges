@@ -7,4 +7,6 @@ Build a button group / toggle component. Define a model of options to take in an
 - @Component()
 - @Input()
 - @Output()
+- *ngFor
+- (click)
 
