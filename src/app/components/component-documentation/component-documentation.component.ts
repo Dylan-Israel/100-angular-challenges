@@ -39,7 +39,6 @@ export class ComponentDocumentationComponent {
     new ButtonMeta({ id: 1, title: 'Bold' }),
     new ButtonMeta({ id: 2, title: 'Italic' }),
     new ButtonMeta({ id: 3, title: 'Underline' }),
-
   ];
 
   public debounceExampleMethod(value: string): void {

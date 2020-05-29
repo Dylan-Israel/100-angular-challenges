@@ -4,11 +4,11 @@
   display: flex;
 
   button {
-    transition: all 0.3s;
     background-color: white;
     border: 1px solid $blue;
     padding: 10px;
     cursor: pointer;
+    transition: all 0.3s;
 
     &:first-child {
       border-right: none;

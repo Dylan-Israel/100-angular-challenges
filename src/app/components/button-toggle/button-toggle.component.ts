@@ -7,13 +7,12 @@ import { ButtonMeta } from './button-meta.model';
   styleUrls: ['./button-toggle.component.scss']
 })
 export class ButtonToggleComponent {
-  @Input() public options: ButtonMeta[] = [];
-  @Output() public selection = new EventEmitter<ButtonMeta>();
-
+  @Input() options: ButtonMeta[] = [];
+  @Output() selection = new EventEmitter<ButtonMeta>();
 
   public selected(selectedOption: ButtonMeta): void {
     this.options.forEach((option) => {
-      option.isActive = (option === selectedOption);
+      option.isActive = (selectedOption === option);
     });
 
     this.selection.emit(selectedOption);
