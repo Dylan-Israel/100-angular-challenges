@@ -9,17 +9,16 @@ import { delay } from 'rxjs/operators';
 })
 export class SnackbarComponent {
   @Input() public message = '';
-  public isActive = false;
+  public isShown = false;
 
-  public show() {
-    this.isActive = true;
+  public show(): void {
+    this.isShown = true;
 
-    const obs = of(null).pipe(delay(2900)).subscribe({
+    const subscription = of(null).pipe(delay(2900)).subscribe({
       complete: () => {
-        this.isActive = false;
-        obs.unsubscribe();
+        this.isShown = false;
+        subscription.unsubscribe();
       }
     });
   }
-
 }
