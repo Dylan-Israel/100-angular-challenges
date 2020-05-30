@@ -6,12 +6,14 @@ import { DirectiveDocumentationComponent } from './directive-documentation/direc
 import { DebounceClickDirective } from './debounce-click/debounce-click.directive';
 import { SharedModule } from '../shared/shared.module';
 import { RippleDirective } from './ripple/ripple.directive';
+import { ScaleDirective } from './scale/scale.directive';
 
 @NgModule({
   declarations: [
     DirectiveDocumentationComponent,
     DebounceClickDirective,
-    RippleDirective
+    RippleDirective,
+    ScaleDirective
   ],
   imports: [
     CommonModule,

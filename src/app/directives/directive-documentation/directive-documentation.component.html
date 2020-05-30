@@ -1,6 +1,12 @@
  <app-banner-cut-out [title]="'Directives'" [imageUrl]="'assets/back-2.jpg'"></app-banner-cut-out>
 
- <hr>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Scale'" [subTitle]="'Directives'">
+   <div body appScale
+     style="width: 100px; height: 100px; background-color: #007acc; margin-left: auto; margin-right: auto">
+
+   </div>
+ </app-card>
+
 
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Ripple'" [subTitle]="'Directives'">
    <div body>
