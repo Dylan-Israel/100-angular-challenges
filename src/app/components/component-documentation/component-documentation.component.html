@@ -1,6 +1,15 @@
  <app-banner-cut-out [title]="'Components'"></app-banner-cut-out>
  <hr>
 
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Snackbar'" [subTitle]="'Components'">
+   <div body>
+     <app-snackbar [message]="'Snackbar Example'" #snackbar></app-snackbar>
+
+
+     <button (click)="snackbar.show()">Show Snackbar</button>
+   </div>
+ </app-card>
+
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Banner Cut Out'" [subTitle]="'Components'">
    <app-banner-cut-out body></app-banner-cut-out>
  </app-card>
