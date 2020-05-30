@@ -1,28 +1,27 @@
-<h1>Other - Guards, Animations & More</h1>
-<hr>
+ <app-banner-cut-out [title]="'Other'" [imageUrl]="'assets/back-5.jpg'"></app-banner-cut-out>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Form Dirty Guard'" [subTitle]="'Other - Guard'">
-  <div body>
-    <form class="email-form" [formGroup]="form" (ngSubmit)="submit()">
-      <div>
-        <div class="name">
-          <input type="text" placeholder="Your Name" formControlName="name">
-        </div>
-      </div>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Form Dirty Guard'" [subTitle]="'Other - Guard'">
+   <div body>
+     <form class="email-form" [formGroup]="form" (ngSubmit)="submit()">
+       <div>
+         <div class="name">
+           <input type="text" placeholder="Your Name" formControlName="name">
+         </div>
+       </div>
 
-      <button>Submit</button>
-    </form>
-  </div>
-</app-card>
+       <button>Submit</button>
+     </form>
+   </div>
+ </app-card>
 
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Fade In Out'" [subTitle]="'Other - Animation'">
-  <div body>
-    <h2 *ngIf="isInDOM" [@fadeInOutAnimation]>Hello</h2>
-    <h2 *ngIf="!isInDOM" [@fadeInOutAnimation]>World</h2>
-  </div>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Fade In Out'" [subTitle]="'Other - Animation'">
+   <div body>
+     <h2 *ngIf="isInDOM" [@fadeInOutAnimation]>Hello</h2>
+     <h2 *ngIf="!isInDOM" [@fadeInOutAnimation]>World</h2>
+   </div>
 
-  <div footer>
-    <button (click)="isInDOM = !isInDOM">Toggle Animation</button>
-  </div>
-</app-card>
+   <div footer>
+     <button (click)="isInDOM = !isInDOM">Toggle Animation</button>
+   </div>
+ </app-card>

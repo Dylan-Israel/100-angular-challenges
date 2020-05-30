@@ -1,33 +1,33 @@
-<h1>Pipes</h1>
-<hr>
+ <app-banner-cut-out [title]="'Pipes'" [imageUrl]="'assets/back-4.jpg'"></app-banner-cut-out>
+ <hr>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Filter Term'" [subTitle]="'Pipes'">
-  <div body>
-    {{ ['Hello', 'World', 'Hello World'] | appFilterTerm : 'World'  }}
-  </div>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Filter Term'" [subTitle]="'Pipes'">
+   <div body>
+     {{ ['Hello', 'World', 'Hello World'] | appFilterTerm : 'World'  }}
+   </div>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Flatten'" [subTitle]="'Pipes'">
-  <div body>
-    {{ flattenData | appFlatten}}
-  </div>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Flatten'" [subTitle]="'Pipes'">
+   <div body>
+     {{ flattenData | appFlatten}}
+   </div>
 
-  <div class="footer" footer>
-    <button (click)="modifyFlatten()">Modify</button>
-    <button (click)="reassignFlatten()">Reassign</button>
-  </div>
-</app-card>
+   <div class="footer" footer>
+     <button (click)="modifyFlatten()">Modify</button>
+     <button (click)="reassignFlatten()">Reassign</button>
+   </div>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Credit Card Formatter'" [subTitle]="'Pipes'">
-  <div body>
-    <p>{{'1111222233334444' | creditCardFormatter}}</p>
-    <p>{{'111111111111111111111111111111' | creditCardFormatter}}</p>
-    <p>{{'a111222233334444' | creditCardFormatter}}</p>
-  </div>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Credit Card Formatter'" [subTitle]="'Pipes'">
+   <div body>
+     <p>{{'1111222233334444' | creditCardFormatter}}</p>
+     <p>{{'111111111111111111111111111111' | creditCardFormatter}}</p>
+     <p>{{'a111222233334444' | creditCardFormatter}}</p>
+   </div>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Truncate'" [subTitle]="'Pipes'">
-  <p body>
-    {{'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, ea, fugit magnam voluptatum odit fugiat cumque cum temporibus repellendus corrupti reprehenderit deserunt consequuntur laudantium libero beatae adipisci suscipit atque commodi.' | appTruncate : 75}}
-  </p>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Truncate'" [subTitle]="'Pipes'">
+   <p body>
+     {{'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, ea, fugit magnam voluptatum odit fugiat cumque cum temporibus repellendus corrupti reprehenderit deserunt consequuntur laudantium libero beatae adipisci suscipit atque commodi.' | appTruncate : 75}}
+   </p>
+ </app-card>

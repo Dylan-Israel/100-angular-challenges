@@ -33,7 +33,7 @@ export class ComponentDocumentationComponent {
   public selectedTab = 0;
   public RibbonType = RibbonType;
   public RibbonLocation = RibbonLocation;
-  public ribbonStyle = { type: RibbonType.Info, location: RibbonLocation.TopRight };
+  public ribbonStyle = { type: RibbonType.Info, location: RibbonLocation.BottomLeft };
 
   public buttonToggleOptions: ButtonMeta[] = [
     new ButtonMeta({ id: 1, title: 'Bold' }),

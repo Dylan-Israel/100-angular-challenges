@@ -6,7 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./banner-cut-out.component.scss']
 })
 export class BannerCutOutComponent {
-  // tslint:disable-next-line: max-line-length
-  @Input() public imageUrl = 'https://images.unsplash.com/photo-1509478074354-0de2c9bb7c8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2173&q=80';
+  @Input() public imageUrl = 'assets/back-1.jpg';
   @Input() public title = '100 Angular Challenge';
 }

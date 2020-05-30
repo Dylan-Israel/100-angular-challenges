@@ -1,149 +1,149 @@
-<h1>Components</h1>
-<hr>
+ <app-banner-cut-out [title]="'Components'"></app-banner-cut-out>
+ <hr>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Banner Cut Out'" [subTitle]="'Components'">
-  <app-banner-cut-out body></app-banner-cut-out>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Banner Cut Out'" [subTitle]="'Components'">
+   <app-banner-cut-out body></app-banner-cut-out>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Button Toggle'" [subTitle]="'Components'">
-  <app-button-toggle body [options]="buttonToggleOptions"></app-button-toggle>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Button Toggle'" [subTitle]="'Components'">
+   <app-button-toggle body [options]="buttonToggleOptions"></app-button-toggle>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Ribbon'" [subTitle]="'Components'">
-  <div body>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Ribbon'" [subTitle]="'Components'">
+   <div body>
 
-    <app-ribbon [content]="'Beta Course'" [location]="ribbonStyle.location" [type]="ribbonStyle.type"></app-ribbon>
+     <app-ribbon [content]="'Beta Course'" [location]="ribbonStyle.location" [type]="ribbonStyle.type"></app-ribbon>
 
-    <button (click)="ribbonStyle.location = RibbonLocation.TopRight">Top-Right</button>
-    <button (click)="ribbonStyle.location = RibbonLocation.TopLeft">Top-Left</button>
-    <button (click)="ribbonStyle.location = RibbonLocation.BottomRight">Bottom-Right</button>
-    <button (click)="ribbonStyle.location = RibbonLocation.BottomLeft">Bottom-Left</button>
-    <button (click)="ribbonStyle.type = RibbonType.Info">Info</button>
-    <button (click)="ribbonStyle.type = RibbonType.Error">Error</button>
-    <button (click)="ribbonStyle.type = RibbonType.Success">Success</button>
-    <button (click)="ribbonStyle.type = RibbonType.Warning">Warning</button>
+     <button (click)="ribbonStyle.location = RibbonLocation.TopRight">Top-Right</button>
+     <button (click)="ribbonStyle.location = RibbonLocation.TopLeft">Top-Left</button>
+     <button (click)="ribbonStyle.location = RibbonLocation.BottomRight">Bottom-Right</button>
+     <button (click)="ribbonStyle.location = RibbonLocation.BottomLeft">Bottom-Left</button>
+     <button (click)="ribbonStyle.type = RibbonType.Info">Info</button>
+     <button (click)="ribbonStyle.type = RibbonType.Error">Error</button>
+     <button (click)="ribbonStyle.type = RibbonType.Success">Success</button>
+     <button (click)="ribbonStyle.type = RibbonType.Warning">Warning</button>
 
-  </div>
-</app-card>
+   </div>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Email Form'" [subTitle]="'Components'">
-  <app-email-form body></app-email-form>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Email Form'" [subTitle]="'Components'">
+   <app-email-form body></app-email-form>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Sort Table'" [subTitle]="'Components'">
-  <app-sort-table body></app-sort-table>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Sort Table'" [subTitle]="'Components'">
+   <app-sort-table body></app-sort-table>
+ </app-card>
 
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Tabs'" [subTitle]="'Components'">
-  <app-tabs body [tabs]="tabs" (selectedTabIndex)="selectedTab = $event;">
-    <app-paging *ngIf="selectedTab === 0" [totalItems]="200"> </app-paging>
-    <app-counter *ngIf="selectedTab === 1"></app-counter>
-  </app-tabs>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Tabs'" [subTitle]="'Components'">
+   <app-tabs body [tabs]="tabs" (selectedTabIndex)="selectedTab = $event;">
+     <app-paging *ngIf="selectedTab === 0" [totalItems]="200"> </app-paging>
+     <app-counter *ngIf="selectedTab === 1"></app-counter>
+   </app-tabs>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Paging'" [subTitle]="'Components'">
-  <app-paging body [totalItems]="200"> </app-paging>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Paging'" [subTitle]="'Components'">
+   <app-paging body [totalItems]="200"> </app-paging>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Simple Table'" [subTitle]="'Components'">
-  <app-simple-table body></app-simple-table>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Simple Table'" [subTitle]="'Components'">
+   <app-simple-table body></app-simple-table>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Counter'" [subTitle]="'Components'">
-  <app-counter body></app-counter>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Counter'" [subTitle]="'Components'">
+   <app-counter body></app-counter>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Search List'" [subTitle]="'Components'">
-  <app-search-list body [items]="['United States', 'Mexico', 'United Arab Emirates']"></app-search-list>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Search List'" [subTitle]="'Components'">
+   <app-search-list body [items]="['United States', 'Mexico', 'United Arab Emirates']"></app-search-list>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Debounce Search'" [subTitle]="'Components'">
-  <app-debounce-search body (searchUpdate)="debounceExampleMethod($event)"></app-debounce-search>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Debounce Search'" [subTitle]="'Components'">
+   <app-debounce-search body (searchUpdate)="debounceExampleMethod($event)"></app-debounce-search>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Rich Text Viewer'" [subTitle]="'Components'">
-  <div body>
-    <div>
-      <h3>Good Example</h3>
-      <app-rich-text-viewer [htmlText]="'<p>Hello World</p>'"></app-rich-text-viewer>
-    </div>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Rich Text Viewer'" [subTitle]="'Components'">
+   <div body>
+     <div>
+       <h3>Good Example</h3>
+       <app-rich-text-viewer [htmlText]="'<p>Hello World</p>'"></app-rich-text-viewer>
+     </div>
 
-    <div>
-      <h3>Empty Example</h3>
-      <app-rich-text-viewer [htmlText]="'   '"></app-rich-text-viewer>
-    </div>
+     <div>
+       <h3>Empty Example</h3>
+       <app-rich-text-viewer [htmlText]="'   '"></app-rich-text-viewer>
+     </div>
 
-    <div>
-      <h3>Bad HTML Example</h3>
-      <app-rich-text-viewer [htmlText]="'<p> Hello World'"></app-rich-text-viewer>
-    </div>
-  </div>
-</app-card>
+     <div>
+       <h3>Bad HTML Example</h3>
+       <app-rich-text-viewer [htmlText]="'<p> Hello World'"></app-rich-text-viewer>
+     </div>
+   </div>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Quote'" [subTitle]="'Components'">
-  <app-quote body [quote]="'Get Good. Get Great. Get Better.'" [author]="'Dylan C. Israel'"
-    [occupation]="'Software Engineer, Mentor, & Educator'">
-  </app-quote>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Quote'" [subTitle]="'Components'">
+   <app-quote body [quote]="'Get Good. Get Great. Get Better.'" [author]="'Dylan C. Israel'"
+     [occupation]="'Software Engineer, Mentor, & Educator'">
+   </app-quote>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Modal'" [subTitle]="'Components'">
-  <div body>
-    <app-modal [title]="'Modal Example'" #modal>
-      <p>Some Content</p>
-    </app-modal>
-  </div>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Modal'" [subTitle]="'Components'">
+   <div body>
+     <app-modal [title]="'Modal Example'" #modal>
+       <p>Some Content</p>
+     </app-modal>
+   </div>
 
-  <div footer>
-    <button (click)="modal.open()">Call Modal</button>
-  </div>
-</app-card>
+   <div footer>
+     <button (click)="modal.open()">Call Modal</button>
+   </div>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Toggle'" [subTitle]="'Components'">
-  <app-toggle [isOn]="toggleValue" body></app-toggle>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Toggle'" [subTitle]="'Components'">
+   <app-toggle [isOn]="toggleValue" body></app-toggle>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'LinkedIn Post'" [subTitle]="'Components'">
-  <app-linkedin-post body></app-linkedin-post>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'LinkedIn Post'" [subTitle]="'Components'">
+   <app-linkedin-post body></app-linkedin-post>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Twitter Post'" [subTitle]="'Components'">
-  <app-twitter-post body></app-twitter-post>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Twitter Post'" [subTitle]="'Components'">
+   <app-twitter-post body></app-twitter-post>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Loader'" [subTitle]="'Components'">
-  <app-loader body [isLoading]="false" [loaderType]="loaderType"></app-loader>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Loader'" [subTitle]="'Components'">
+   <app-loader body [isLoading]="false" [loaderType]="loaderType"></app-loader>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Credit Card Input'" [subTitle]="'Components'">
-  <div body>
-    <app-credit-card-input [creditCardNumber]="'4321432143214321'" [isReadonly]="false"></app-credit-card-input>
-    <br>
-    <app-credit-card-input [creditCardNumber]="'4321432143214321'" [isReadonly]="true"></app-credit-card-input>
-  </div>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Credit Card Input'" [subTitle]="'Components'">
+   <div body>
+     <app-credit-card-input [creditCardNumber]="'4321432143214321'" [isReadonly]="false"></app-credit-card-input>
+     <br>
+     <app-credit-card-input [creditCardNumber]="'4321432143214321'" [isReadonly]="true"></app-credit-card-input>
+   </div>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Top of Page'" [subTitle]="'Components'">
-  <p body>Scroll 400px down the page to render.</p>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Top of Page'" [subTitle]="'Components'">
+   <p body>Scroll 400px down the page to render.</p>
 
-</app-card>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Star Ratings'" [subTitle]="'Components'">
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Star Ratings'" [subTitle]="'Components'">
 
-  <app-star-ratings body [rating]="2.75"></app-star-ratings>
-</app-card>
+   <app-star-ratings body [rating]="2.75"></app-star-ratings>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Progress Bar'" [subTitle]="'Components'">
-  <app-progress-bar body [value]="progressValue"></app-progress-bar>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Progress Bar'" [subTitle]="'Components'">
+   <app-progress-bar body [value]="progressValue"></app-progress-bar>
 
-  <button footer (click)="progressValue = 75;">Update</button>
-</app-card>
+   <button footer (click)="progressValue = 75;">Update</button>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Accordion'" [subTitle]="'Components'">
-  <app-accordion body [items]="accordionItems"></app-accordion>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Accordion'" [subTitle]="'Components'">
+   <app-accordion body [items]="accordionItems"></app-accordion>
+ </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Card'" [subTitle]="'Components'">
-  <p footer>Footer Content</p>
-  <p body>Body Content</p>
-</app-card>
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Card'" [subTitle]="'Components'">
+   <p footer>Footer Content</p>
+   <p body>Body Content</p>
+ </app-card>
