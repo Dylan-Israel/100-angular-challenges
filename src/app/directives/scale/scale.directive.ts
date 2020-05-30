@@ -1,4 +1,4 @@
-import { Directive, HostListener, ElementRef } from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appScale]'
@@ -17,5 +17,4 @@ export class ScaleDirective {
   public mouseout(): void {
     this.element.nativeElement.style.transform = 'scale(1.0)';
   }
-
 }
