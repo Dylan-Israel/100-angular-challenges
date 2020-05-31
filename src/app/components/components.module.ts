@@ -27,6 +27,7 @@ import { EmailFormComponent } from './email-form/email-form.component';
 import { RibbonComponent } from './ribbon/ribbon.component';
 import { ButtonToggleComponent } from './button-toggle/button-toggle.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
+import { SimplePopupComponent } from './simple-popup/simple-popup.component';
 
 @NgModule({
   declarations: [ComponentDocumentationComponent,
@@ -52,6 +53,7 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
     RibbonComponent,
     ButtonToggleComponent,
     SnackbarComponent,
+    SimplePopupComponent,
   ],
   imports: [
     CommonModule,

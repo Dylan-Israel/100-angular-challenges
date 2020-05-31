@@ -1,0 +1,32 @@
+@import 'src/styles';
+
+.popup-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  .popup-text {
+    background-color: $background-color;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    width: 160px;
+    margin-left: -80px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: $background-color transparent transparent transparent;
+    }
+  }
+}
