@@ -1,6 +1,12 @@
  <app-banner-cut-out [title]="'Components'"></app-banner-cut-out>
  <hr>
 
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Countdown Timer'" [subTitle]="'Components'">
+
+   <app-countdown-timer body [time]="'Jan 5, 2021 15:37:25'"></app-countdown-timer>
+
+ </app-card>
+
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Simple Popup'" [subTitle]="'Components'">
    <div body>
      <app-simple-popup [message]="'Simple Popup Component'">
@@ -9,12 +15,9 @@
    </div>
  </app-card>
 
-
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Snackbar'" [subTitle]="'Components'">
    <div body>
      <app-snackbar [message]="'Snackbar Example'"></app-snackbar>
-
-
      <button (click)="snackbarShow()">Show Snackbar</button>
    </div>
  </app-card>
