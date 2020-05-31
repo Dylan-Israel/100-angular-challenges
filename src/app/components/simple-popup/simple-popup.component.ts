@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { fadeInOutAnimation } from '../../other/animations/fade-in-out/fade-in-out.animation';
 import { of } from 'rxjs';
 import { delay } from 'rxjs/operators';
-import { fadeInOutAnimation } from '../../other/animations/fade-in-out/fade-in-out.animation';
 
 @Component({
   selector: 'app-simple-popup',

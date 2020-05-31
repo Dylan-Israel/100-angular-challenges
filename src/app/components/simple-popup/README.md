@@ -6,6 +6,7 @@ Create a simple popup that is shown on click above the element.
 ---
 - @Component()
 - @Input()
+- ng-content
 - fadeInOutAnimation
 - *ngIf
 - (click)
