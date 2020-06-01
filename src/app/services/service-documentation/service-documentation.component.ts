@@ -29,6 +29,6 @@ export class ServiceDocumentationComponent implements OnInit {
   }
 
   public callSnackbar(): void {
-    this.snackbarService.callSnackBar('Snackbar Service Example');
+    this.snackbarService.callSnackbar('Snackbar Service Example');
   }
 }

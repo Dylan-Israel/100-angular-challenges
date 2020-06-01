@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject, Observable } from 'rxjs';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +7,7 @@ import { Subject, Observable } from 'rxjs';
 export class SnackbarService {
   public snackbar$ = new Subject<string>();
 
-  public callSnackBar(message: string): void {
+  public callSnackbar(message: string): void {
     this.snackbar$.next(message);
   }
 }

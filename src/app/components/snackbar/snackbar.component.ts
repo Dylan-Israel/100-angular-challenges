@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { of } from 'rxjs';
 import { delay } from 'rxjs/operators';
-import { SnackbarService } from '../../services/snackbar/snackbar.service';
+import { SnackbarService } from 'src/app/services/snackbar/snackbar.service';
 
 @Component({
   selector: 'app-snackbar',
@@ -16,13 +16,13 @@ export class SnackbarComponent implements OnInit {
 
   public ngOnInit(): void {
     this.snackbarService.snackbar$.subscribe((value) => {
-      this.message = value;
-      this.show();
+      this.showMessage(value);
     });
   }
 
-  public show(): void {
+  public showMessage(message: string): void {
     this.isShown = true;
+    this.message = message;
 
     const subscription = of(null).pipe(delay(2900)).subscribe({
       complete: () => {

@@ -44,7 +44,7 @@ export class ComponentDocumentationComponent {
   ];
 
   public snackbarShow(): void {
-    this.snackBar.show();
+    this.snackBar.showMessage('Snackbar Example');
   }
 
   public debounceExampleMethod(value: string): void {
