@@ -1,23 +1,26 @@
-import { Directive, HostListener, Input, Inject } from '@angular/core';
+import { Directive, Input, HostListener, Inject } from '@angular/core';
+import { SnackbarService } from '../../services/snackbar/snackbar.service';
 
 @Directive({
   selector: '[appCopy]'
 })
 export class CopyDirective {
-  @Input() public appCopy = '';
+  @Input() appCopy = '';
 
   constructor(
     @Inject('Navigator') public navigator: Navigator,
-    @Inject('Document') public document: Document
+    @Inject('Document') public document: Document,
+    public snackbarService: SnackbarService
   ) { }
 
   @HostListener('click')
-  public async copy() {
+  public async copy(): Promise<void> {
     try {
-      await navigator.clipboard.writeText(this.appCopy);
-      document.execCommand('copy');
+      await this.navigator.clipboard.writeText(this.appCopy);
+      this.document.execCommand('copy');
+      this.snackbarService.callSnackbar('Copied Successfully.');
     } catch {
-      console.log('Failed.');
+      this.snackbarService.callSnackbar('Copied Failed.');
     }
   }
 }

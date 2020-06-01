@@ -8,7 +8,6 @@ import { SharedModule } from '../shared/shared.module';
 import { RippleDirective } from './ripple/ripple.directive';
 import { ScaleDirective } from './scale/scale.directive';
 import { CopyDirective } from './copy/copy.directive';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [

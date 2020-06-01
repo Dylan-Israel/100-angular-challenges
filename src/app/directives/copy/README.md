@@ -1,6 +1,6 @@
 # Copy Directive 
 
-Create a directive that copies the text provided. 
+Create a directive that copies the text provided and notifies the user it was copied using the SnackbarService.
 
 ## Tips
 ---
@@ -10,3 +10,4 @@ Create a directive that copies the text provided.
 - @HostListener
 - navigator
 - document
+- SnackbarService
