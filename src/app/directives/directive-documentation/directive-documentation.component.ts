@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./directive-documentation.component.scss']
 })
 export class DirectiveDocumentationComponent {
-
   public log() {
     console.log('Hello World');
   }

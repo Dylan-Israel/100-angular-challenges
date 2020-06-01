@@ -1,9 +1,12 @@
  <app-banner-cut-out [title]="'Directives'" [imageUrl]="'assets/back-2.jpg'"></app-banner-cut-out>
 
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Copy'" [subTitle]="'Directives'">
+   <button body appCopy="Copy Example" style="border: 1px solid black; text-align: center; padding: 10px;">Copy</button>
+ </app-card>
+
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Scale'" [subTitle]="'Directives'">
    <div body appScale
      style="width: 100px; height: 100px; background-color: #007acc; margin-left: auto; margin-right: auto">
-
    </div>
  </app-card>
 
