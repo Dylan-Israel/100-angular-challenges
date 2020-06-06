@@ -7,5 +7,5 @@ export const fadeInOutAnimation = trigger('fadeInOutAnimation', [
   ]),
   transition(':leave', [
     animate(500, style({ opacity: 0 }))
-  ])
+  ]),
 ]);

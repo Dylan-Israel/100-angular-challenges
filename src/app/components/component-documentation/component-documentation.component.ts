@@ -1,5 +1,4 @@
 import { Component, ViewChild } from '@angular/core';
-import { trigger, transition, group, query, style, animate } from '@angular/animations';
 import { AccordionItem } from '../accordion/accordion-item.interface';
 import { LoaderType } from '../loader/models/loader-type.enum';
 import { RibbonType } from '../ribbon/ribbon-type';

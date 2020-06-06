@@ -2,8 +2,15 @@
  <hr>
 
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Skeleton Loader'" [subTitle]="'Components'">
+   <div body>
+     <app-skeleton-loader *ngIf="!loaded" [width]="'100%'" [height]="'50px'">
+     </app-skeleton-loader>
+     <p *ngIf="loaded">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos ad sequi doloremque harum illum
+       deserunt delectus assumenda et enim adipisci. Rem deserunt nisi inventore cupiditate repudiandae, nesciunt
+       aspernatur non nostrum.</p>
+   </div>
 
-   <app-skeleton-loader body *ngIf="!loaded" [width]="'100px'" [height]="'100px'"></app-skeleton-loader>
+   <button footer (click)="loaded = !loaded">Toggle</button>
 
  </app-card>
 
