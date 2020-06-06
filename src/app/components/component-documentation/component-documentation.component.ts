@@ -44,6 +44,8 @@ export class ComponentDocumentationComponent {
     new ButtonMeta({ id: 3, title: 'Underline' }),
   ];
 
+  public loaded = false;
+
   public snackbarShow(): void {
     this.snackBar.showMessage('Snackbar Example');
   }

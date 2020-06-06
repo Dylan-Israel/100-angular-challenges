@@ -27,6 +27,7 @@ import { RibbonComponent } from './ribbon/ribbon.component';
 import { ButtonToggleComponent } from './button-toggle/button-toggle.component';
 import { SimplePopupComponent } from './simple-popup/simple-popup.component';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
+import { SkeletonLoaderComponent } from './skeleton-loader/skeleton-loader.component';
 
 @NgModule({
   declarations: [ComponentDocumentationComponent,
@@ -52,6 +53,7 @@ import { CountdownTimerComponent } from './countdown-timer/countdown-timer.compo
     ButtonToggleComponent,
     SimplePopupComponent,
     CountdownTimerComponent,
+    SkeletonLoaderComponent,
   ],
   imports: [
     CommonModule,

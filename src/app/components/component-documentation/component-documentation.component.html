@@ -1,6 +1,13 @@
  <app-banner-cut-out [title]="'Components'"></app-banner-cut-out>
  <hr>
 
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Skeleton Loader'" [subTitle]="'Components'">
+
+   <app-skeleton-loader body *ngIf="!loaded" [width]="'100px'" [height]="'100px'"></app-skeleton-loader>
+
+ </app-card>
+
+
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Footer'" [subTitle]="'Components'">
 
    <app-footer body></app-footer>
