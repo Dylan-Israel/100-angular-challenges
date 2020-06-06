@@ -26,7 +26,8 @@ import { LazyLoadImageDirective } from './lazy-load-image/lazy-load-image.direct
   ],
   providers: [
     { provide: 'Navigator', useValue: navigator },
-    { provide: 'Document', useValue: document }
+    { provide: 'Document', useValue: document },
+    { provide: 'Window', useValue: window },
   ]
 })
 export class DirectivesModule { }

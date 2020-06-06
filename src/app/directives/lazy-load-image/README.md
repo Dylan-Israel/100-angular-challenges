@@ -10,4 +10,6 @@ Create a lazy load image directive that only loads an image if it is in view.
 - IntersectionObserver
 - ngAfterViewInit
 - ngOnDestroy
+- ElementRef
+- @Injection()
 
