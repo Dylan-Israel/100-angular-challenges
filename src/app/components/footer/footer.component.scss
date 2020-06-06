@@ -1,6 +1,6 @@
 @import 'src/styles';
 
-.footer-container {
+footer {
   .social-media-container {
     display: grid;
     grid-gap: 10px;
@@ -20,6 +20,7 @@
       display: grid;
       grid-gap: 20px;
       grid-auto-flow: column;
+      justify-items: center;
 
       li {
         font-size: 2em;
@@ -44,7 +45,7 @@
     }
   }
 
-  .copyright-container {
+  .copy-right {
     background-color: $tertiary-background;
     padding: 5px;
     text-align: center;
