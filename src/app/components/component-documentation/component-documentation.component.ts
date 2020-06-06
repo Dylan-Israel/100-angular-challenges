@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { trigger, transition, group, query, style, animate } from '@angular/animations';
 import { AccordionItem } from '../accordion/accordion-item.interface';
 import { LoaderType } from '../loader/models/loader-type.enum';
 import { RibbonType } from '../ribbon/ribbon-type';
@@ -9,7 +10,7 @@ import { SnackbarComponent } from '../snackbar/snackbar.component';
 @Component({
   selector: 'app-component-documentation',
   templateUrl: './component-documentation.component.html',
-  styleUrls: ['./component-documentation.component.scss']
+  styleUrls: ['./component-documentation.component.scss'],
 })
 export class ComponentDocumentationComponent {
   public accordionItems: AccordionItem[] = [

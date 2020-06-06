@@ -21,7 +21,6 @@ import { SearchListComponent } from './search-list/search-list.component';
 import { CounterComponent } from './counter/counter.component';
 import { SimpleTableComponent } from './simple-table/simple-table.component';
 import { PagingComponent } from './paging/paging.component';
-import { TabsComponent } from './tabs/tabs.component';
 import { SortTableComponent } from './sort-table/sort-table.component';
 import { EmailFormComponent } from './email-form/email-form.component';
 import { RibbonComponent } from './ribbon/ribbon.component';
@@ -47,7 +46,6 @@ import { CountdownTimerComponent } from './countdown-timer/countdown-timer.compo
     CounterComponent,
     SimpleTableComponent,
     PagingComponent,
-    TabsComponent,
     SortTableComponent,
     EmailFormComponent,
     RibbonComponent,

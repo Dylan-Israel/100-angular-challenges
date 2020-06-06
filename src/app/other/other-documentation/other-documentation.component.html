@@ -1,5 +1,13 @@
  <app-banner-cut-out [title]="'Other'" [imageUrl]="'assets/back-5.jpg'"></app-banner-cut-out>
 
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Slide Right'" [subTitle]="'Other - Animation'">
+   <app-tabs body [tabs]="tabs" (selectedTabIndex)="selectedTab = $event;">
+     <h1 @slideRightAnimation *ngIf="selectedTab === 0">Tab 1 Example</h1>
+     <h1 @slideRightAnimation *ngIf="selectedTab === 1">Tab 2 Example</h1>
+   </app-tabs>
+ </app-card>
+
+
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Form Dirty Guard'" [subTitle]="'Other - Guard'">
    <div body>
      <form class="email-form" [formGroup]="form" (ngSubmit)="submit()">
