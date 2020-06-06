@@ -6,6 +6,6 @@ export const slideRightAnimation = trigger('slideRightAnimation', [
       display: 'block',
       transform: 'translateX(-100%)'
     }),
-    animate('1s ease-out')
-  ]),
+    animate('0.5s ease-out')
+  ])
 ]);
