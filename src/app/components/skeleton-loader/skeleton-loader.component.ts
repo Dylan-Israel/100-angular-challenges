@@ -6,15 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./skeleton-loader.component.scss'],
 })
 export class SkeletonLoaderComponent {
-  @Input() public width: string;
-  @Input() public height: string;
+  @Input() public width = '100%';
+  @Input() public height = '100%';
 
   public get dimensions() {
-    const dimensions = {
-      width: this.width ? this.width : '100%',
-      height: this.height ? this.height : '100%'
-    };
-
-    return dimensions;
+    return { width: this.width, height: this.height };
   }
 }

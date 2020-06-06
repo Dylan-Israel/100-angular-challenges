@@ -1,6 +1,6 @@
-# Skelton Loader Component
+# Skeleton Loader Component
 
-Build a quote component that takes in a quote, author and occupation.
+Build a skeleton loader that takes in a width and height. It should have a nice loading animation as well.
 
 ## Tips
 ---
