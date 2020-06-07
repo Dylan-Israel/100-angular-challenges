@@ -6,6 +6,7 @@ import { BannerCutOutComponent } from '../components/banner-cut-out/banner-cut-o
 import { SnackbarComponent } from '../components/snackbar/snackbar.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { TabsComponent } from '../components/tabs/tabs.component';
+import { SocialMediaBarComponent } from '../components/social-media-bar/social-media-bar.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TabsComponent } from '../components/tabs/tabs.component';
     BannerCutOutComponent,
     SnackbarComponent,
     FooterComponent,
-    TabsComponent
+    TabsComponent,
+    SocialMediaBarComponent
   ],
   exports: [
     CardComponent,
@@ -22,7 +24,8 @@ import { TabsComponent } from '../components/tabs/tabs.component';
     BannerCutOutComponent,
     SnackbarComponent,
     FooterComponent,
-    TabsComponent
+    TabsComponent,
+    SocialMediaBarComponent
   ],
   imports: [
     CommonModule

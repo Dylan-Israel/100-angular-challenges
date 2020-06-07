@@ -1,0 +1,25 @@
+<div class="social-media-bar-container">
+  <ng-container *ngFor="let icon of socialMedia">
+    <ng-container [ngSwitch]="icon.type">
+      <a *ngSwitchCase="SocialMedia.Facebook" href="https://www.facebook.com/groups/190277791450732/" class="facebook"
+        target="blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a *ngSwitchCase="SocialMedia.Instagram" href="https://www.instagram.com/dylansphotos87/" class="instagram"
+        target="blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a *ngSwitchCase="SocialMedia.LinkedIn" href="https://www.linkedin.com/in/dylan310/" class="linked-in"
+        target="blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a *ngSwitchCase="SocialMedia.Twitter" href="https://twitter.com/PizzaPokerGuy" class="twitter" target="blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a *ngSwitchCase="SocialMedia.YouTube" href="https://www.youtube.com/codingtutorials360" class="you-tube"
+        target="blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </ng-container>
+  </ng-container>
+</div>

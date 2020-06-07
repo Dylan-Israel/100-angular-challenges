@@ -5,6 +5,8 @@ import { RibbonType } from '../ribbon/ribbon-type';
 import { RibbonLocation } from '../ribbon/ribbon-location.enum';
 import { ButtonMeta } from '../button-toggle/button-meta.model';
 import { SnackbarComponent } from '../snackbar/snackbar.component';
+import { SocialMediaIcon } from '../social-media-bar/models/social-media-icon.interface';
+import { SocialMedia } from '../social-media-bar/models/social-media.enum';
 
 @Component({
   selector: 'app-component-documentation',
@@ -44,6 +46,13 @@ export class ComponentDocumentationComponent {
   ];
 
   public loaded = false;
+  public socialMedia: SocialMediaIcon[] = [
+    { href: 'https://www.facebook.com/groups/190277791450732', type: SocialMedia.Facebook },
+    { href: 'https://www.instagram.com/dylansphotos87/', type: SocialMedia.Instagram },
+    { href: 'https://www.linkedin.com/in/dylan310/', type: SocialMedia.LinkedIn },
+    { href: 'https://twitter.com/PizzaPokerGuy', type: SocialMedia.Twitter },
+    { href: 'https://www.YouTube.com/CodingTutorials360', type: SocialMedia.YouTube },
+  ];
 
   public snackbarShow(): void {
     this.snackBar.showMessage('Snackbar Example');

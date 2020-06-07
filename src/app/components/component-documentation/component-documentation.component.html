@@ -1,6 +1,13 @@
  <app-banner-cut-out [title]="'Components'"></app-banner-cut-out>
  <hr>
 
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Social Media Bar'" [subTitle]="'Components'">
+   <div body>
+     <app-social-media-bar [socialMedia]="socialMedia"></app-social-media-bar>
+   </div>
+ </app-card>
+
+
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Skeleton Loader'" [subTitle]="'Components'">
    <div body>
      <app-skeleton-loader *ngIf="!loaded">
@@ -13,7 +20,6 @@
    <button footer (click)="loaded = !loaded">Toggle</button>
 
  </app-card>
-
 
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Footer'" [subTitle]="'Components'">
 
