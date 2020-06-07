@@ -3,18 +3,18 @@
 .bottom-sheet-container {
   @include box-shadow();
   background-color: white;
-  border-top-right-radius: 5px;
   border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   padding: 20px;
   position: fixed;
   bottom: 0;
   z-index: 21;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translateX(-50%);
   min-width: 300px;
   max-height: 750px;
-  visibility: none;
   bottom: -750px;
+  visibility: none;
   transition: all 0.3s;
 
   @media screen and (max-width: $tablet) {
@@ -27,7 +27,7 @@
   }
 }
 
-.modal-overlay {
+.bottom-sheet-overlay {
   position: fixed;
   top: 0;
   bottom: 0;
