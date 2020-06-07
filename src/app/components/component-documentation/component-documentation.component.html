@@ -1,12 +1,26 @@
  <app-banner-cut-out [title]="'Components'"></app-banner-cut-out>
  <hr>
 
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Bottom Sheet'" [subTitle]="'Components'">
+   <div body>
+     <app-bottom-sheet #bottomSheet>
+       <h1 (click)="bottomSheet.hide()">Hello</h1>
+       <h1 (click)="bottomSheet.hide()">World</h1>
+     </app-bottom-sheet>
+
+     <div class="footer" footer>
+       <button (click)="bottomSheet.show()">Show</button>
+     </div>
+
+   </div>
+ </app-card>
+
+
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Social Media Bar'" [subTitle]="'Components'">
    <div body>
      <app-social-media-bar [socialMedia]="socialMedia"></app-social-media-bar>
    </div>
  </app-card>
-
 
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Skeleton Loader'" [subTitle]="'Components'">
    <div body>

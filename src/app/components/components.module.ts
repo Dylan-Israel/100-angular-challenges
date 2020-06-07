@@ -28,6 +28,7 @@ import { ButtonToggleComponent } from './button-toggle/button-toggle.component';
 import { SimplePopupComponent } from './simple-popup/simple-popup.component';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
 import { SkeletonLoaderComponent } from './skeleton-loader/skeleton-loader.component';
+import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
 
 @NgModule({
   declarations: [ComponentDocumentationComponent,
@@ -54,6 +55,7 @@ import { SkeletonLoaderComponent } from './skeleton-loader/skeleton-loader.compo
     SimplePopupComponent,
     CountdownTimerComponent,
     SkeletonLoaderComponent,
+    BottomSheetComponent,
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,45 @@
+@import 'src/styles';
+
+.bottom-sheet-container {
+  @include box-shadow();
+  background-color: white;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  z-index: 21;
+  left: 50%;
+  transform: translate(-50%, 0);
+  min-width: 300px;
+  max-height: 750px;
+  visibility: none;
+  bottom: -750px;
+  transition: all 0.3s;
+
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+  }
+
+  &.show {
+    visibility: visible;
+    bottom: 0;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  z-index: 2;
+  transition: opacity 0.3s;
+
+  &.is-hidden {
+    z-index: -1;
+    opacity: 0;
+  }
+}
