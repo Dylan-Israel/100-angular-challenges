@@ -1,6 +1,16 @@
  <app-banner-cut-out [title]="'Components'"></app-banner-cut-out>
  <hr>
 
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Fieldset'" [subTitle]="'Components'">
+   <div body>
+
+     <app-fieldset [legend]="'Address'">
+       <app-email-form></app-email-form>
+     </app-fieldset>
+
+   </div>
+ </app-card>
+
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Bottom Sheet'" [subTitle]="'Components'">
    <div body>
      <app-bottom-sheet #bottomSheet>
@@ -14,7 +24,6 @@
 
    </div>
  </app-card>
-
 
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Social Media Bar'" [subTitle]="'Components'">
    <div body>

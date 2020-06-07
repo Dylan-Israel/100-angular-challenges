@@ -29,6 +29,7 @@ import { SimplePopupComponent } from './simple-popup/simple-popup.component';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
 import { SkeletonLoaderComponent } from './skeleton-loader/skeleton-loader.component';
 import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
+import { FieldsetComponent } from './fieldset/fieldset.component';
 
 @NgModule({
   declarations: [ComponentDocumentationComponent,
@@ -56,6 +57,7 @@ import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
     CountdownTimerComponent,
     SkeletonLoaderComponent,
     BottomSheetComponent,
+    FieldsetComponent,
   ],
   imports: [
     CommonModule,

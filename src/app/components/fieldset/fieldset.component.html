@@ -1,0 +1,9 @@
+<fieldset>
+  <legend (click)="toggle()">
+    <i [ngClass]="['fas', isOpen ? 'fa-minus' : 'fa-plus']"></i> {{legend}}
+  </legend>
+
+  <div *ngIf="isOpen">
+    <ng-content></ng-content>
+  </div>
+</fieldset>
