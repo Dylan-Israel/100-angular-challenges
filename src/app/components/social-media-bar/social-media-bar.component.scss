@@ -10,7 +10,7 @@
     color: white;
     text-decoration: none;
     padding: 15px;
-    transition: all 0.3s;
+    transition: all 0.3;
     font-size: 20px;
     text-align: center;
 
@@ -22,16 +22,16 @@
       background-color: #C13584;
     }
 
+    &.linked-in {
+      background-color: #0E76A8;
+    }
+
     &.twitter {
       background-color: #1DA1F2;
     }
 
-    &.linked-in {
-      background-color: #0e76a8;
-    }
-
     &.you-tube {
-      background-color: #c4302b;
+      background-color: #C4302B;
     }
 
     &:hover {
