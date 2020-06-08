@@ -6,8 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./fieldset.component.scss']
 })
 export class FieldsetComponent {
-  @Input() public legend = '';
-  @Input() public isOpen = true;
+  @Input() legend = '';
+  @Input() isOpen = true;
 
   public toggle(): void {
     this.isOpen = !this.isOpen;
