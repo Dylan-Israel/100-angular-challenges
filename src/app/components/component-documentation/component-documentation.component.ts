@@ -7,6 +7,7 @@ import { ButtonMeta } from '../button-toggle/button-meta.model';
 import { SnackbarComponent } from '../snackbar/snackbar.component';
 import { SocialMediaIcon } from '../social-media-bar/models/social-media-icon.interface';
 import { SocialMedia } from '../social-media-bar/models/social-media.enum';
+import { PillType } from '../pill/pill-type.enum';
 
 @Component({
   selector: 'app-component-documentation',
@@ -53,6 +54,7 @@ export class ComponentDocumentationComponent {
     { href: 'https://twitter.com/PizzaPokerGuy', type: SocialMedia.Twitter },
     { href: 'https://www.YouTube.com/CodingTutorials360', type: SocialMedia.YouTube },
   ];
+  public PillType = PillType;
 
   public snackbarShow(): void {
     this.snackBar.showMessage('Snackbar Example');

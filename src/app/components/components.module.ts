@@ -30,6 +30,7 @@ import { CountdownTimerComponent } from './countdown-timer/countdown-timer.compo
 import { SkeletonLoaderComponent } from './skeleton-loader/skeleton-loader.component';
 import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
 import { FieldsetComponent } from './fieldset/fieldset.component';
+import { PillComponent } from './pill/pill.component';
 
 @NgModule({
   declarations: [ComponentDocumentationComponent,
@@ -58,6 +59,7 @@ import { FieldsetComponent } from './fieldset/fieldset.component';
     SkeletonLoaderComponent,
     BottomSheetComponent,
     FieldsetComponent,
+    PillComponent,
   ],
   imports: [
     CommonModule,
