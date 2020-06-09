@@ -7,7 +7,7 @@ import { PillType } from './pill-type.enum';
   styleUrls: ['./pill.component.scss']
 })
 export class PillComponent {
-  @Input() public type = PillType.Info;
+  @Input() public type: PillType = PillType.Info;
   @Input() public label = '';
   @Input() public iconClasses = '';
 }

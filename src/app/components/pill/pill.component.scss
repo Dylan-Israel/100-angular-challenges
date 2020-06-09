@@ -11,19 +11,20 @@
   grid-gap: 5px;
   align-items: center;
 
-  &.success {
-    background-color: $green;
+  &.error {
+    background-color: $red;
   }
 
   &.info {
     background-color: $blue;
   }
 
-  &.error {
-    background-color: $red;
+  &.success {
+    background-color: $green;
   }
 
   &.warning {
     background-color: $orange;
   }
+
 }
