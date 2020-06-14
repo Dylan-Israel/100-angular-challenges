@@ -1,4 +1,6 @@
-<div [ngClass]="['pill-container', type]">
+<div [ngClass]="['pill-container', type]" (click)="toggle()">
   <i *ngIf="iconClasses" [ngClass]="iconClasses"></i>
   <span>{{label}}</span>
+
+  <i *ngIf="isActive && canBeSelected" class="far fa-times-circle"></i>
 </div>
