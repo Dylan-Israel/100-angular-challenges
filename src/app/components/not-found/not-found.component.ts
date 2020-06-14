@@ -11,23 +11,21 @@ export class NotFoundComponent implements OnInit {
 
   constructor(public router: Router) { }
 
-  public get redirectMessage() {
-    if (this.redirectCount < 1) {
-
-      return `Redirecting...`;
+  public get redirectMessage(): string {
+    if (this.redirectCount <= 0) {
+      return 'Redirecting ...';
     }
 
-    return `Redirecting you to the home page in ${this.redirectCount}.`;
+    return `Redirecting you to home page in ${this.redirectCount}.`;
   }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     setInterval(() => {
       this.redirectCount--;
 
-      if (this.redirectCount === 0) {
+      if (this.redirectCount <= 0) {
         this.router.navigate(['']);
       }
     }, 1000);
   }
-
 }
