@@ -16,7 +16,6 @@ export class PillComponent {
 
   public toggle(): void {
     this.isActive = !this.isActive;
-    const hasBeenSelected = this.isActive ? true : false;
-    this.selected.emit({ hasBeenSelected, label: this.label });
+    this.selected.emit({ hasBeenSelected: this.isActive, label: this.label });
   }
 }

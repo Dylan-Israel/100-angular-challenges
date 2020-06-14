@@ -1,5 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { } from 'protractor';
+import { Component, Input, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-pill-filters',
@@ -7,29 +6,32 @@ import { } from 'protractor';
   styleUrls: ['./pill-filters.component.scss']
 })
 export class PillFiltersComponent {
-  private pillLabels: string[] = [];
-  @Input() public set pills(value: string[]) {
+  private pillLabels: string[];
+
+  @Input() set pills(value: string[]) {
     this.pillLabels = value;
     this.unselectedPills = value;
   }
-  public get pills(): string[] {
-    return this.pillLabels;
-  }
-  public selectedPills: string[] = [];
-  public unselectedPills: string[] = [];
-  @Output() public selected = new EventEmitter<string[]>();
 
-  public pillUpdate(pillDetails: { hasBeenSelected: boolean, label: string }) {
+  public unselectedPills: string[] = [];
+  public selectedPills: string[] = [];
+
+  public selected = new EventEmitter<string[]>();
+
+  public addFilter(pillDetails: { hasBeenSelected: boolean, label: string }): void {
     if (pillDetails.hasBeenSelected) {
-      const selectedPillIndex = this.unselectedPills.indexOf(pillDetails.label);
-      const [selectedPill] = this.unselectedPills.splice(selectedPillIndex, 1);
+      const selectedIndex = this.unselectedPills.indexOf(pillDetails.label);
+      const [selectedPill] = this.unselectedPills.splice(selectedIndex, 1);
       this.selectedPills.push(selectedPill);
-    } else {
-      const selectedPillIndex = this.selectedPills.indexOf(pillDetails.label);
-      const [selectedPill] = this.selectedPills.splice(selectedPillIndex, 1);
+      this.selected.emit(this.selectedPills);
+    }
+  }
+
+  public removeFilter(pillDetails: { hasBeenSelected: boolean, label: string }): void {
+    if (!pillDetails.hasBeenSelected) {
+      const selectedIndex = this.selectedPills.indexOf(pillDetails.label);
+      const [selectedPill] = this.selectedPills.splice(selectedIndex, 1);
       this.unselectedPills.push(selectedPill);
     }
-
-    this.selected.emit(this.selectedPills);
   }
 }
