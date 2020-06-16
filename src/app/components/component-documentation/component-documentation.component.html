@@ -1,6 +1,12 @@
  <app-banner-cut-out [title]="'Components'"></app-banner-cut-out>
  <hr>
 
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Password'" [subTitle]="'Components'">
+   <div body>
+     <app-password></app-password>
+   </div>
+ </app-card>
+
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Not Found'" [subTitle]="'Components'">
    <div body>
      <a routerLink="404">Go to Unknown Page</a>

@@ -32,6 +32,7 @@ import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
 import { FieldsetComponent } from './fieldset/fieldset.component';
 import { PillComponent } from './pill/pill.component';
 import { PillFiltersComponent } from './pill-filters/pill-filters.component';
+import { PasswordComponent } from './password/password.component';
 
 @NgModule({
   declarations: [ComponentDocumentationComponent,
@@ -62,6 +63,7 @@ import { PillFiltersComponent } from './pill-filters/pill-filters.component';
     FieldsetComponent,
     PillComponent,
     PillFiltersComponent,
+    PasswordComponent,
   ],
   imports: [
     CommonModule,
