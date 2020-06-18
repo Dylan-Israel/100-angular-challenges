@@ -18,22 +18,38 @@ export class PasswordComponent {
     return this.currentPassword;
   }
 
+  public get is8CharsOrGreater(): boolean {
+    return this.currentPassword.length >= 8;
+  }
+
+  public get hasOneCapitalLetter(): boolean {
+    return /(.*[A-Z].*)/.test(this.currentPassword);
+  }
+
+  public get hasANumber(): boolean {
+    return /(.*\d.*)/.test(this.currentPassword);
+  }
+
+  public get hasASpecialCharacter(): boolean {
+    return /\W|_/g.test(this.currentPassword);
+  }
+
   private updatePasswordValue(value: string) {
     let count = 0;
 
-    if (value.length >= 8) {
+    if (this.is8CharsOrGreater) {
       count += 25;
     }
 
-    if (/(.*[A-Z].*)/.test(value)) {
+    if (this.hasOneCapitalLetter) {
       count += 25;
     }
 
-    if (/(.*\d.*)/.test(value)) {
+    if (this.hasANumber) {
       count += 25;
     }
 
-    if (/\W|_/g.test(value)) {
+    if (this.hasASpecialCharacter) {
       count += 25;
     }
 
