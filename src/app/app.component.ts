@@ -7,6 +7,7 @@ import { TitleService } from './services/title/title.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
   constructor(public titleService: TitleService) { }
 
   public ngOnInit() {
