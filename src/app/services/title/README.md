@@ -10,3 +10,5 @@ Build a service that updates the page title when routes are changed.
 - Router
 - ActivatedRoute
 - NavigationEnd
+- ngOnInit()
+- filter()
