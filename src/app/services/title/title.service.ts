@@ -8,9 +8,7 @@ import { filter } from 'rxjs/operators';
 })
 export class TitleService {
 
-  constructor(public titleService: Title, public router: Router, public activatedRoute: ActivatedRoute) {
-
-  }
+  constructor(public titleService: Title, public router: Router, public activatedRoute: ActivatedRoute) { }
 
   public initializeTitleService(): void {
     this.router.events.pipe(
@@ -19,13 +17,18 @@ export class TitleService {
       .subscribe(() => {
         const { data } = this.activatedRoute.root.firstChild.snapshot;
         const mainTitle = '100 Angular Challenge';
+        const lastTitle = this.titleService.getTitle();
 
         if (data) {
-          let { title } = data;
-          title = title ? `${mainTitle} - ${title}` : mainTitle;
-          this.titleService.setTitle(title);
+          const title = data.title ? `${mainTitle} - ${data.title}` : mainTitle;
+
+          if (lastTitle !== title) {
+            this.titleService.setTitle(title);
+          }
         } else {
-          this.titleService.setTitle(mainTitle);
+          if (lastTitle !== mainTitle) {
+            this.titleService.setTitle(mainTitle);
+          }
         }
       });
   }
