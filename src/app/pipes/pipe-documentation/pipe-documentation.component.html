@@ -1,6 +1,12 @@
  <app-banner-cut-out [title]="'Pipes'" [imageUrl]="'assets/back-4.jpg'"></app-banner-cut-out>
  <hr>
 
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Rich Text'" [subTitle]="'Pipes'">
+   <div body>
+     <div [innerHtml]="html | richText"> </div>
+   </div>
+ </app-card>
+
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Filter Term'" [subTitle]="'Pipes'">
    <div body>
      {{ ['Hello', 'World', 'Hello World'] | appFilterTerm : 'World'  }}

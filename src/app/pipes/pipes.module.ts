@@ -7,9 +7,10 @@ import { TruncatePipe } from './truncate/truncate.pipe';
 import { SharedModule } from '../shared/shared.module';
 import { CreditCardFormatterPipe } from './credit-card-formatter/credit-card-formatter.pipe';
 import { FlattenPipe } from './flatten/flatten.pipe';
+import { RichTextPipe } from './rich-text/rich-text.pipe';
 
 @NgModule({
-  declarations: [PipeDocumentationComponent, TruncatePipe, CreditCardFormatterPipe, FlattenPipe],
+  declarations: [PipeDocumentationComponent, TruncatePipe, CreditCardFormatterPipe, FlattenPipe, RichTextPipe],
   imports: [
     CommonModule,
     SharedModule,
