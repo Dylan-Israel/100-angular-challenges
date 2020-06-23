@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { htmlRegex } from '../../components/rich-text-viewer/html-regex.data';
+import { htmlRegex } from 'src/app/components/rich-text-viewer/html-regex.data';
 
 @Pipe({
   name: 'richText'
@@ -13,7 +13,7 @@ export class RichTextPipe implements PipeTransform {
     return isValidHtml ? html : '';
   }
 
-  private parseNonEmptyHtml(html: string = '') {
+  private parseNonEmptyHtml(html: string) {
     const htmlTags: RegExp = /<[^]*?>/g;
     const hasContent = html.replace(htmlTags, '').trim().length > 0;
 
