@@ -4,8 +4,8 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'sortBy',
 })
 export class SortByPipe implements PipeTransform {
-  public transform(value: string[] | { [fieldName: string]: string }[], order: number = 1, sortKey?: string)
-    : string[] | { [fieldName: string]: string }[] {
+  public transform(value: string[], isAscending = true)
+    : string[] {
     if (value === null || value === undefined) {
       return value;
     }
@@ -14,13 +14,20 @@ export class SortByPipe implements PipeTransform {
       throw new Error(`Must be an array.`);
     }
 
-    const direction = order === 1 ? 1 : -1;
-    const reverseDirection = order === -1 ? -1 : 1;
+    return (value as string[]).sort((a, b) => {
+      const upperCased1 = a.toUpperCase();
+      const upperCased2 = b.toUpperCase();
 
-    if (!sortKey) {
-      return (value as string[]).sort((a, b) => (a > b ? direction : reverseDirection));
-    }
+      if (upperCased1 < upperCased2) {
+        return isAscending ? -1 : 1;
+      }
 
-    return (value as { [fieldName: string]: string }[]).sort((a, b) => (a[sortKey] > b[sortKey] ? direction : reverseDirection));
+      if (upperCased1 > upperCased2) {
+        return !isAscending ? -1 : 1;
+      }
+
+      return 0;
+    });
+
   }
 }
