@@ -4,17 +4,16 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'sortBy',
 })
 export class SortByPipe implements PipeTransform {
-  public transform(value: string[], isAscending = true)
-    : string[] {
+  public transform(value: string[], isAscending = true): string[] {
     if (value === null || value === undefined) {
       return value;
     }
 
     if (!Array.isArray(value)) {
-      throw new Error(`Must be an array.`);
+      throw new Error('Sort by pipe requires an array.');
     }
 
-    return (value as string[]).sort((a, b) => {
+    return value.sort((a, b) => {
       const upperCased1 = a.toUpperCase();
       const upperCased2 = b.toUpperCase();
 
@@ -23,11 +22,10 @@ export class SortByPipe implements PipeTransform {
       }
 
       if (upperCased1 > upperCased2) {
-        return !isAscending ? -1 : 1;
+        return !isAscending ? - 1 : 1;
       }
 
       return 0;
     });
-
   }
 }
