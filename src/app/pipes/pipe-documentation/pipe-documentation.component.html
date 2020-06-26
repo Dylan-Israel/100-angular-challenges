@@ -1,6 +1,16 @@
  <app-banner-cut-out [title]="'Pipes'" [imageUrl]="'assets/back-4.jpg'"></app-banner-cut-out>
  <hr>
 
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Sort By Key'" [subTitle]="'Pipes'">
+   <div body>
+     <h5>String Ascending</h5>
+     <p *ngFor="let obj of objectArray | sortByKey : 'content'">{{ obj.content  }}</p>
+
+     <h5>String Descending</h5>
+     <p *ngFor="let obj of objectArray | sortByKey : 'content' : false">{{ obj.content  }}</p>
+   </div>
+ </app-card>
+
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Sort By'" [subTitle]="'Pipes'">
    <div body>
      <h5>String Ascending</h5>
