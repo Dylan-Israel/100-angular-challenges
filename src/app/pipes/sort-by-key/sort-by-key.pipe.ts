@@ -16,16 +16,15 @@ export class SortByKeyPipe implements PipeTransform {
     const values = [...value];
 
     return values.sort((a, b) => {
-      const upperCased1 = a[key].toUpperCase();
-      const upperCased2 = b[key].toUpperCase();
-      console.log(isAscending);
+      const upperCased1 = a[key].toLowerCase();
+      const upperCased2 = b[key].toLowerCase();
 
       if (upperCased1 < upperCased2) {
         return isAscending ? -1 : 1;
       }
 
       if (upperCased1 > upperCased2) {
-        return !isAscending ? - 1 : 1;
+        return !isAscending ? -1 : 1;
       }
 
       return 0;
