@@ -55,6 +55,7 @@ export class ComponentDocumentationComponent {
     { href: 'https://www.YouTube.com/CodingTutorials360', type: SocialMedia.YouTube },
   ];
   public PillType = PillType;
+  public isShownOverlay = false;
 
   public snackbarShow(): void {
     this.snackBar.showMessage('Snackbar Example');

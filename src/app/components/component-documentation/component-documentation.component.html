@@ -1,6 +1,13 @@
  <app-banner-cut-out [title]="'Components'"></app-banner-cut-out>
  <hr>
 
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Overlay'" [subTitle]="'Components'">
+   <div body>
+     <app-overlay [isShown]="isShownOverlay"></app-overlay>
+     <button (click)="isShownOverlay = true">Show Overlay</button>
+   </div>
+ </app-card>
+
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Password'" [subTitle]="'Components'">
    <div body>
      <app-password></app-password>
