@@ -4,6 +4,8 @@ import { Component, Input } from '@angular/core';
   selector: 'app-overlay',
   templateUrl: './overlay.component.html',
   styleUrls: ['./overlay.component.scss']
-}) export class OverlayComponent {
+})
+export class OverlayComponent {
   @Input() public isShown = false;
 }
+
