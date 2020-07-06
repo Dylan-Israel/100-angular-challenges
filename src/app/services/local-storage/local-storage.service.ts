@@ -7,7 +7,6 @@ import { BehaviorSubject } from 'rxjs';
 export class LocalStorageService {
   private readonly stateKey = 'state';
   private state: { [key: string]: any };
-
   public state$ = new BehaviorSubject<{ [key: string]: any }>({});
 
   constructor(@Inject('LocalStorage') public localStorage: Storage) {
@@ -22,5 +21,4 @@ export class LocalStorageService {
     Object.freeze(this.state);
     this.state$.next(this.state);
   }
-
 }

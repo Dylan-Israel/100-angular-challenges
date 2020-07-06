@@ -43,6 +43,6 @@ export class ServiceDocumentationComponent implements OnInit {
   }
 
   public updateState(): void {
-    this.localStorageService.setState('hello', 'world');
+    this.localStorageService.setState('hello', 'darkness my old friend');
   }
 }

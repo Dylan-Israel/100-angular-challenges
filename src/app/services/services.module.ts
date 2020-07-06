@@ -16,8 +16,10 @@ import { LocalStorageService } from './local-storage/local-storage.service';
     SharedModule,
     RouterModule.forChild(SERVICES_ROUTES)
   ],
-  providers: [UserService, LocalStorageService,
-    { provide: 'LocalStorage', useValue: window.localStorage },
+  providers: [
+    UserService,
+    LocalStorageService,
+    { provide: 'LocalStorage', useValue: window.localStorage }
   ]
 })
 export class ServicesModule { }
