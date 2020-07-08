@@ -8,6 +8,7 @@ import { SnackbarComponent } from '../snackbar/snackbar.component';
 import { SocialMediaIcon } from '../social-media-bar/models/social-media-icon.interface';
 import { SocialMedia } from '../social-media-bar/models/social-media.enum';
 import { PillType } from '../pill/pill-type.enum';
+import { jsonExample } from './json-example';
 
 @Component({
   selector: 'app-component-documentation',
@@ -56,6 +57,7 @@ export class ComponentDocumentationComponent {
   ];
   public PillType = PillType;
   public isShownOverlay = false;
+  public jsonExample = jsonExample;
 
   public snackbarShow(): void {
     this.snackBar.showMessage('Snackbar Example');

@@ -1,6 +1,12 @@
  <app-banner-cut-out [title]="'Components'"></app-banner-cut-out>
  <hr>
 
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Pretty JSON'" [subTitle]="'Components'">
+   <div body>
+     <app-pretty-json [code]="jsonExample"></app-pretty-json>
+   </div>
+ </app-card>
+
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Overlay'" [subTitle]="'Components'">
    <div body>
      <app-overlay [isShown]="isShownOverlay"></app-overlay>
