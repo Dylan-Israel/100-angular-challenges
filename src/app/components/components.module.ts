@@ -34,7 +34,6 @@ import { PillComponent } from './pill/pill.component';
 import { PillFiltersComponent } from './pill-filters/pill-filters.component';
 import { PasswordComponent } from './password/password.component';
 import { OverlayComponent } from './overlay/overlay.component';
-import { PrettyJsonComponent } from './pretty-json/pretty-json.component';
 
 @NgModule({
   declarations: [ComponentDocumentationComponent,
@@ -67,7 +66,6 @@ import { PrettyJsonComponent } from './pretty-json/pretty-json.component';
     PillFiltersComponent,
     PasswordComponent,
     OverlayComponent,
-    PrettyJsonComponent
   ],
   imports: [
     CommonModule,
