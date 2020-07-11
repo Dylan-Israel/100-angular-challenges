@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user/user.model';
-import { UserService } from '../user/user.service';
+
 import { SnackbarService } from '../snackbar/snackbar.service';
 import { LocalStorageService } from '../local-storage/local-storage.service';
+import { AUserService } from '../user/a-user.service';
 
 @Component({
   selector: 'app-service-documentation',
@@ -14,7 +15,7 @@ export class ServiceDocumentationComponent implements OnInit {
   public state: { [key: string]: any } = {};
 
   constructor(
-    public userService: UserService,
+    public userService: AUserService,
     public snackbarService: SnackbarService,
     public localStorageService: LocalStorageService
   ) { }
