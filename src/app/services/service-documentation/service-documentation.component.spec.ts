@@ -9,8 +9,6 @@ describe(ServiceDocumentationComponent.name, () => {
   describe('General', () => {
     let service: ServiceDocumentationComponent;
     let userService: AUserService;
-    let snackBarService: SnackbarService;
-    let localStorageService: LocalStorageService;
 
     beforeEach(() => {
       userService = new UserServiceMock();
