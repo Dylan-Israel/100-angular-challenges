@@ -14,7 +14,7 @@ describe(ServiceDocumentationComponent.name, () => {
 
     beforeEach(() => {
       userService = new UserServiceMock();
-      service = new ServiceDocumentationComponent(userService, null, null);
+      service = new ServiceDocumentationComponent(userService, null, null, null);
     });
   });
 });
