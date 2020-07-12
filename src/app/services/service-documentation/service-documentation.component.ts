@@ -4,8 +4,8 @@ import { User } from '../user/user.model';
 import { SnackbarService } from '../snackbar/snackbar.service';
 import { LocalStorageService } from '../local-storage/local-storage.service';
 import { AUserService } from '../user/a-user.service';
-import { Router, ActivatedRoute } from '@angular/router';
-import { tap, map, mergeMap } from 'rxjs/operators';
+import { ActivatedRoute } from '@angular/router';
+import { map, mergeMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-service-documentation',
@@ -25,19 +25,15 @@ export class ServiceDocumentationComponent implements OnInit {
   ) { }
 
   public ngOnInit(): void {
-    this.route.params.pipe(
-      map((params) => params.id),
-      mergeMap((id) => this.userService.getUserById(id))
-    ).subscribe(
-      {
-        next: (data) => {
-          console.table(data);
-        },
-        error: () => {
-          // do nothing
+    this.route.params
+      .pipe(
+        map((params) => params.id),
+        mergeMap((id) => this.userService.getUserById(id))
+      ).subscribe({
+        next: (value) => {
+          this.userIdExample = value;
         }
-      }
-    );
+      });
 
     this.localStorageService.state$.subscribe((data) => {
       this.state = data;
