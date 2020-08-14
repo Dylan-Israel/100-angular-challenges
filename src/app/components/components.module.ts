@@ -13,7 +13,6 @@ import { LoaderComponent } from './loader/loader.component';
 import { TwitterPostComponent } from './twitter-post/twitter-post.component';
 import { LinkedinPostComponent } from './linkedin-post/linkedin-post.component';
 import { ToggleComponent } from './toggle/toggle.component';
-import { ModalComponent } from './modal/modal.component';
 import { QuoteComponent } from './quote/quote.component';
 import { RichTextViewerComponent } from './rich-text-viewer/rich-text-viewer.component';
 import { DebounceSearchComponent } from './debounce-search/debounce-search.component';
@@ -34,6 +33,7 @@ import { PillComponent } from './pill/pill.component';
 import { PillFiltersComponent } from './pill-filters/pill-filters.component';
 import { PasswordComponent } from './password/password.component';
 import { OverlayComponent } from './overlay/overlay.component';
+import { RadioSelectionComponent } from './radio-selection/radio-selection.component';
 
 @NgModule({
   declarations: [ComponentDocumentationComponent,
@@ -45,7 +45,6 @@ import { OverlayComponent } from './overlay/overlay.component';
     TwitterPostComponent,
     LinkedinPostComponent,
     ToggleComponent,
-    ModalComponent,
     QuoteComponent,
     RichTextViewerComponent,
     DebounceSearchComponent,
@@ -66,6 +65,7 @@ import { OverlayComponent } from './overlay/overlay.component';
     PillFiltersComponent,
     PasswordComponent,
     OverlayComponent,
+    RadioSelectionComponent,
   ],
   imports: [
     CommonModule,

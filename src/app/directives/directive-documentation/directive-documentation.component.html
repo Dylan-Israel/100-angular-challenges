@@ -1,5 +1,21 @@
  <app-banner-cut-out [title]="'Directives'" [imageUrl]="'assets/back-2.jpg'"></app-banner-cut-out>
 
+ <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Auto Focus'" [subTitle]="'Directives'">
+   <div body>
+     <app-modal #modal>
+
+       <div *ngIf="!modal.isHidden">
+         <input type="text" appAutoFocus>
+       </div>
+
+     </app-modal>
+   </div>
+
+   <div footer class="footer">
+     <button (click)="modal.open()">Call Modal</button>
+   </div>
+ </app-card>
+
  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Copy'" [subTitle]="'Directives'">
    <button body appCopy="Directive Copy Example"
      style="border: 1px solid black; text-align: center; padding: 10px;">Copy</button>

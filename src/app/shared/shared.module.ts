@@ -7,6 +7,7 @@ import { SnackbarComponent } from '../components/snackbar/snackbar.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { TabsComponent } from '../components/tabs/tabs.component';
 import { SocialMediaBarComponent } from '../components/social-media-bar/social-media-bar.component';
+import { ModalComponent } from '../components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SocialMediaBarComponent } from '../components/social-media-bar/social-m
     SnackbarComponent,
     FooterComponent,
     TabsComponent,
-    SocialMediaBarComponent
+    SocialMediaBarComponent,
+    ModalComponent
   ],
   exports: [
     CardComponent,
@@ -25,7 +27,8 @@ import { SocialMediaBarComponent } from '../components/social-media-bar/social-m
     SnackbarComponent,
     FooterComponent,
     TabsComponent,
-    SocialMediaBarComponent
+    SocialMediaBarComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule
