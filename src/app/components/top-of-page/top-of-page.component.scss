@@ -13,6 +13,7 @@ button {
   width: 0;
   visibility: hidden;
   @include box-shadow();
+  outline: none;
 
   &.is-shown {
     height: 50px;

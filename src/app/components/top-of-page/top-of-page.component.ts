@@ -1,5 +1,5 @@
-import { Component, HostListener } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-top-of-page',
